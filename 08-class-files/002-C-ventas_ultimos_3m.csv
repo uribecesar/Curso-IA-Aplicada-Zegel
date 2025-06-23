@@ -1,0 +1,121 @@
+Fecha,Producto,Cantidad,Precio Unitario (USD),Total (USD),Canal de Venta,Método de Pago,Región
+2025-05-11,Cámara DSLR,9,978.75,8808.75,Venta telefónica,PayPal,Centro
+2025-06-15,Smartphone X1,5,801.58,4007.9,Tienda física,Transferencia bancaria,Centro
+2025-05-01,Teclado mecánico,2,1059.64,2119.28,Venta telefónica,Tarjeta de débito,Este
+2025-04-09,Smartphone X1,4,1186.37,4745.48,Venta telefónica,Transferencia bancaria,Sur
+2025-05-29,Cámara DSLR,9,1019.61,9176.49,Marketplace,Efectivo,Centro
+2025-05-20,"Monitor 24""",7,484.18,3389.26,Online,Transferencia bancaria,Este
+2025-06-12,Laptop Pro 15,3,1138.42,3415.26,Tienda física,Tarjeta de débito,Norte
+2025-04-10,Smartwatch S3,8,800.16,6401.28,Tienda física,Tarjeta de débito,Este
+2025-05-16,Smartwatch S3,4,315.08,1260.32,Tienda física,PayPal,Norte
+2025-06-09,Teclado mecánico,8,399.36,3194.88,Marketplace,PayPal,Oeste
+2025-04-27,Tablet T8,6,841.7,5050.2,Venta telefónica,Tarjeta de débito,Sur
+2025-05-03,Tablet T8,8,288.29,2306.32,Tienda física,Efectivo,Centro
+2025-05-08,Teclado mecánico,2,864.14,1728.28,Venta telefónica,Transferencia bancaria,Oeste
+2025-05-24,Tablet T8,8,152.56,1220.48,Venta telefónica,Tarjeta de crédito,Centro
+2025-04-23,"Monitor 24""",9,781.45,7033.05,Venta telefónica,Efectivo,Norte
+2025-05-25,Cámara DSLR,1,1150.05,1150.05,Venta telefónica,Efectivo,Oeste
+2025-04-17,"Monitor 24""",3,1043.95,3131.85,Tienda física,Efectivo,Norte
+2025-04-04,"Monitor 24""",9,419.06,3771.54,Online,Tarjeta de débito,Norte
+2025-05-17,Teclado mecánico,10,393.59,3935.9,Marketplace,Tarjeta de débito,Este
+2025-03-27,"Monitor 24""",10,1270.94,12709.4,Tienda física,Tarjeta de crédito,Sur
+2025-06-03,Cámara DSLR,3,1125.33,3375.99,Marketplace,Tarjeta de débito,Sur
+2025-06-02,Tablet T8,3,797.88,2393.64,Online,PayPal,Oeste
+2025-04-09,Ratón ergonómico,10,1214.51,12145.1,Marketplace,Efectivo,Norte
+2025-04-21,Tablet T8,3,312.22,936.66,Venta telefónica,Transferencia bancaria,Norte
+2025-05-31,Laptop Pro 15,6,642.87,3857.22,Marketplace,Tarjeta de débito,Este
+2025-05-02,"Monitor 24""",3,462.64,1387.92,Tienda física,Efectivo,Este
+2025-05-07,Ratón ergonómico,8,148.12,1184.96,Venta telefónica,PayPal,Centro
+2025-05-12,Cámara DSLR,3,1194.65,3583.95,Online,Tarjeta de crédito,Sur
+2025-05-02,Impresora láser,3,1479.29,4437.87,Tienda física,PayPal,Norte
+2025-04-18,Smartphone X1,5,530.43,2652.15,Venta telefónica,PayPal,Este
+2025-04-12,Teclado mecánico,8,660.1,5280.8,Marketplace,Tarjeta de crédito,Centro
+2025-06-08,Smartphone X1,8,1073.39,8587.12,Online,Tarjeta de crédito,Sur
+2025-05-03,Teclado mecánico,7,509.26,3564.82,Venta telefónica,Transferencia bancaria,Sur
+2025-06-18,Tablet T8,6,379.7,2278.2,Marketplace,Tarjeta de crédito,Sur
+2025-05-26,Smartwatch S3,8,598.03,4784.24,Venta telefónica,Tarjeta de débito,Este
+2025-05-29,Ratón ergonómico,1,202.75,202.75,Online,Efectivo,Oeste
+2025-04-11,"Monitor 24""",4,426.18,1704.72,Venta telefónica,Transferencia bancaria,Norte
+2025-05-10,Laptop Pro 15,10,73.79,737.9,Tienda física,Tarjeta de crédito,Sur
+2025-05-16,"Monitor 24""",7,62.89,440.23,Online,Transferencia bancaria,Centro
+2025-04-29,Auriculares BT,6,1483.11,8898.66,Marketplace,Efectivo,Norte
+2025-05-27,Cámara DSLR,2,279.8,559.6,Tienda física,Tarjeta de débito,Este
+2025-05-13,"Monitor 24""",5,923.45,4617.25,Tienda física,PayPal,Oeste
+2025-05-31,Auriculares BT,8,847.92,6783.36,Online,PayPal,Norte
+2025-05-20,Impresora láser,8,545.08,4360.64,Marketplace,Tarjeta de débito,Centro
+2025-05-06,"Monitor 24""",6,1354.18,8125.08,Tienda física,Transferencia bancaria,Oeste
+2025-05-27,Smartphone X1,10,160.35,1603.5,Venta telefónica,Efectivo,Sur
+2025-05-01,Laptop Pro 15,9,954.58,8591.22,Venta telefónica,Transferencia bancaria,Sur
+2025-03-27,Impresora láser,8,139.38,1115.04,Online,PayPal,Oeste
+2025-05-09,Laptop Pro 15,1,755.01,755.01,Online,Tarjeta de crédito,Este
+2025-05-16,Smartwatch S3,4,1223.64,4894.56,Venta telefónica,Transferencia bancaria,Este
+2025-03-27,Impresora láser,8,1247.81,9982.48,Online,Tarjeta de crédito,Norte
+2025-06-23,"Monitor 24""",3,1490.05,4470.15,Online,Transferencia bancaria,Centro
+2025-06-21,Ratón ergonómico,9,281.95,2537.55,Marketplace,Tarjeta de crédito,Sur
+2025-05-23,Tablet T8,3,946.57,2839.71,Tienda física,Tarjeta de crédito,Este
+2025-05-25,Teclado mecánico,7,1107.33,7751.31,Marketplace,Tarjeta de crédito,Centro
+2025-04-29,Ratón ergonómico,2,1188.83,2377.66,Online,Transferencia bancaria,Sur
+2025-05-23,Smartphone X1,6,179.1,1074.6,Venta telefónica,Efectivo,Oeste
+2025-05-21,Auriculares BT,9,641.5,5773.5,Tienda física,Transferencia bancaria,Este
+2025-06-13,Cámara DSLR,7,1091.11,7637.77,Marketplace,Transferencia bancaria,Norte
+2025-04-22,Tablet T8,1,203.48,203.48,Venta telefónica,PayPal,Este
+2025-06-11,Cámara DSLR,6,126.19,757.14,Marketplace,Transferencia bancaria,Centro
+2025-04-19,Smartphone X1,5,239.29,1196.45,Tienda física,PayPal,Norte
+2025-04-10,Laptop Pro 15,5,1059.25,5296.25,Online,PayPal,Este
+2025-05-16,Cámara DSLR,9,766.46,6898.14,Venta telefónica,Efectivo,Centro
+2025-05-10,Ratón ergonómico,10,1455.4,14554.0,Online,Transferencia bancaria,Oeste
+2025-05-04,Laptop Pro 15,5,915.31,4576.55,Marketplace,Transferencia bancaria,Centro
+2025-05-02,Auriculares BT,2,193.68,387.36,Tienda física,Efectivo,Norte
+2025-04-26,Tablet T8,1,910.2,910.2,Online,PayPal,Sur
+2025-04-18,Ratón ergonómico,10,1416.27,14162.7,Tienda física,Efectivo,Oeste
+2025-05-07,Impresora láser,2,936.46,1872.92,Marketplace,Efectivo,Sur
+2025-05-01,"Monitor 24""",7,367.04,2569.28,Marketplace,Efectivo,Oeste
+2025-04-21,Auriculares BT,9,780.27,7022.43,Venta telefónica,Efectivo,Oeste
+2025-04-04,Smartwatch S3,10,1158.11,11581.1,Venta telefónica,Transferencia bancaria,Centro
+2025-06-16,Tablet T8,4,738.39,2953.56,Tienda física,Tarjeta de crédito,Centro
+2025-06-22,Laptop Pro 15,6,1211.29,7267.74,Online,Transferencia bancaria,Norte
+2025-05-15,Laptop Pro 15,1,449.61,449.61,Venta telefónica,Tarjeta de crédito,Este
+2025-05-10,Laptop Pro 15,5,1133.14,5665.7,Marketplace,Tarjeta de débito,Este
+2025-05-29,Cámara DSLR,5,813.83,4069.15,Online,Tarjeta de crédito,Este
+2025-04-11,Ratón ergonómico,5,572.21,2861.05,Online,Tarjeta de débito,Norte
+2025-04-23,Cámara DSLR,2,775.65,1551.3,Tienda física,Tarjeta de crédito,Centro
+2025-06-16,Smartphone X1,1,947.31,947.31,Venta telefónica,Tarjeta de crédito,Norte
+2025-03-31,"Monitor 24""",7,479.12,3353.84,Tienda física,PayPal,Oeste
+2025-03-30,Tablet T8,9,783.28,7049.52,Venta telefónica,Transferencia bancaria,Centro
+2025-04-13,Laptop Pro 15,3,1309.49,3928.47,Marketplace,Tarjeta de crédito,Centro
+2025-06-16,Cámara DSLR,3,769.93,2309.79,Online,Tarjeta de débito,Norte
+2025-05-03,Ratón ergonómico,3,269.76,809.28,Tienda física,Tarjeta de débito,Este
+2025-04-19,Ratón ergonómico,1,29.18,29.18,Venta telefónica,Tarjeta de crédito,Centro
+2025-03-28,Ratón ergonómico,2,854.0,1708.0,Online,Tarjeta de débito,Centro
+2025-03-28,Cámara DSLR,2,32.21,64.42,Marketplace,Tarjeta de débito,Este
+2025-05-24,Laptop Pro 15,6,1497.79,8986.74,Online,Transferencia bancaria,Sur
+2025-04-13,Impresora láser,8,1131.42,9051.36,Marketplace,Tarjeta de débito,Este
+2025-06-04,Auriculares BT,9,98.38,885.42,Venta telefónica,PayPal,Centro
+2025-06-17,Teclado mecánico,8,754.56,6036.48,Online,Transferencia bancaria,Sur
+2025-05-18,"Monitor 24""",10,444.33,4443.3,Tienda física,Tarjeta de crédito,Sur
+2025-05-25,Tablet T8,7,946.24,6623.68,Online,Tarjeta de débito,Centro
+2025-05-25,Auriculares BT,10,577.17,5771.7,Marketplace,PayPal,Sur
+2025-06-23,Impresora láser,1,563.07,563.07,Venta telefónica,Tarjeta de débito,Sur
+2025-04-30,Laptop Pro 15,1,1356.93,1356.93,Tienda física,Tarjeta de crédito,Norte
+2025-04-04,"Monitor 24""",4,549.36,2197.44,Online,Transferencia bancaria,Oeste
+2025-06-23,Auriculares BT,8,204.29,1634.32,Tienda física,Transferencia bancaria,Centro
+2025-06-18,Ratón ergonómico,3,401.29,1203.87,Tienda física,Tarjeta de débito,Oeste
+2025-06-05,"Monitor 24""",5,1088.42,5442.1,Tienda física,Efectivo,Centro
+2025-03-25,Tablet T8,5,726.9,3634.5,Online,Transferencia bancaria,Oeste
+2025-04-06,Laptop Pro 15,1,498.62,498.62,Online,PayPal,Norte
+2025-04-20,"Monitor 24""",8,282.61,2260.88,Venta telefónica,Tarjeta de crédito,Oeste
+2025-05-23,Auriculares BT,9,78.87,709.83,Venta telefónica,Tarjeta de débito,Sur
+2025-04-14,Impresora láser,2,189.7,379.4,Tienda física,Efectivo,Norte
+2025-05-24,Smartwatch S3,5,1098.69,5493.45,Tienda física,PayPal,Sur
+2025-05-23,Teclado mecánico,10,1166.62,11666.2,Tienda física,Tarjeta de débito,Centro
+2025-03-28,Smartwatch S3,2,325.51,651.02,Tienda física,Efectivo,Sur
+2025-05-19,Auriculares BT,2,293.42,586.84,Tienda física,Tarjeta de crédito,Este
+2025-05-09,Ratón ergonómico,9,240.33,2162.97,Tienda física,PayPal,Este
+2025-05-26,Teclado mecánico,5,446.34,2231.7,Tienda física,Transferencia bancaria,Oeste
+2025-04-20,Smartwatch S3,8,836.69,6693.52,Online,Tarjeta de crédito,Oeste
+2025-04-01,Smartphone X1,4,844.18,3376.72,Venta telefónica,Tarjeta de crédito,Este
+2025-06-01,Impresora láser,4,1145.71,4582.84,Online,Tarjeta de débito,Sur
+2025-05-08,Auriculares BT,3,1127.97,3383.91,Venta telefónica,Tarjeta de crédito,Oeste
+2025-06-01,Smartwatch S3,6,385.43,2312.58,Online,Tarjeta de débito,Este
+2025-05-26,Laptop Pro 15,10,1327.83,13278.3,Venta telefónica,Tarjeta de débito,Norte
+2025-05-06,Tablet T8,9,924.14,8317.26,Marketplace,Efectivo,Oeste

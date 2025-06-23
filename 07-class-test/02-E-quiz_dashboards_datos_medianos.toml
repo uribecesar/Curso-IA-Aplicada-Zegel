@@ -1,0 +1,71 @@
+title = 'Dashboards con IA: Flujo de Trabajo con Datos Medianos'
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué formato de archivo es ideal para trabajar con dashboards generados por IA?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'PDF', correct = false },
+    { content.Text = 'Imagen JPG', correct = false },
+    { content.Text = 'CSV limpio y estructurado', correct = true },
+    { content.Text = 'Archivo ZIP con múltiples hojas', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es el principal beneficio de un dashboard HTML que carga archivos CSV?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Puede editar el archivo en línea', correct = false },
+    { content.Text = 'Genera visualizaciones interactivas sin programación', correct = true },
+    { content.Text = 'Solo sirve para ver tablas planas', correct = false },
+    { content.Text = 'Requiere instalar software adicional', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es un síntoma típico de un problema de formato de fecha en un CSV?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Gráficos de tiempo vacíos o sin datos', correct = true },
+    { content.Text = 'Carga demasiado rápida', correct = false },
+    { content.Text = 'Columnas duplicadas', correct = false },
+    { content.Text = 'KPIs con demasiados decimales', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué técnica mejora el rendimiento con datasets grandes en dashboards IA?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Incluir todos los datos en una sola tabla', correct = false },
+    { content.Text = 'Procesamiento por chunks y carga progresiva', correct = true },
+    { content.Text = 'Subir archivos Excel de más de 50 MB', correct = false },
+    { content.Text = 'Usar CSS para cargar gráficos más rápido', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué representa el verdadero cambio de paradigma en el uso de dashboards IA?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Hacer que todos programen', correct = false },
+    { content.Text = 'Democratizar el análisis de datos sin depender de expertos', correct = true },
+    { content.Text = 'Usar más hojas de Excel', correct = false },
+    { content.Text = 'Diseñar mejores presentaciones de PowerPoint', correct = false },
+]

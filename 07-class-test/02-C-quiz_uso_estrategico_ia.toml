@@ -1,0 +1,71 @@
+title = 'Uso Estratégico de IA Generativa en Análisis de Datos'
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es una forma efectiva de usar IA generativa en análisis de datos?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Usar IA solo para traducir textos técnicos', correct = false },
+    { content.Text = 'Solicitar resúmenes y visualizaciones a partir de un CSV', correct = true },
+    { content.Text = 'Ejecutar scripts automáticos sin validación', correct = false },
+    { content.Text = 'Reemplazar completamente al equipo de analistas', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Por qué la IA generativa puede acelerar el análisis de datos?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Porque evita toda limpieza de datos', correct = false },
+    { content.Text = 'Porque interpreta lenguaje natural y genera respuestas automáticas', correct = true },
+    { content.Text = 'Porque crea nuevas bases de datos desde cero', correct = false },
+    { content.Text = 'Porque reemplaza el hardware empresarial', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es un buen uso de prompts en análisis con IA?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Preguntar por cualquier tema general', correct = false },
+    { content.Text = 'Especificar estructura de análisis, gráficos e insights deseados', correct = true },
+    { content.Text = 'Copiar preguntas sin contexto', correct = false },
+    { content.Text = 'Usar preguntas demasiado abiertas sin objetivos', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué hace más útil a la IA frente a herramientas tradicionales?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Su capacidad para escribir código en R', correct = false },
+    { content.Text = 'Su costo de licencia elevado', correct = false },
+    { content.Text = 'Su habilidad de producir resultados desde lenguaje natural', correct = true },
+    { content.Text = 'Su integración con hojas de cálculo', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué enfoque aprovecha mejor la IA generativa en análisis de datos?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Combinar intuición humana con interpretación automatizada', correct = true },
+    { content.Text = 'Evitar el juicio personal en la toma de decisiones', correct = false },
+    { content.Text = 'Sustituir al analista completamente', correct = false },
+    { content.Text = 'Usar IA sin revisar sus resultados', correct = false },
+]

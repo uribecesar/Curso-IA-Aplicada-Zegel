@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - Mi Proyecto</title>
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(135deg, #6e71c4 0%, #764ba2 100%);
+            color: white;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Navegación */
+        .nav {
+            padding: 1rem 0;
+        }
+
+        .nav-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0 1.5rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-left-color: rgba(255,255,255,0.5);
+            transform: translateX(5px);
+        }
+
+        .nav-link.active {
+            background-color: rgba(255,255,255,0.15);
+            border-left-color: white;
+            font-weight: 500;
+        }
+
+        .nav-link.sub-item {
+            padding-left: 2.5rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-link.sub-sub-item {
+            padding-left: 3.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Estilos para el contenido renderizado */
+        .markdown-content h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #e5e5e5;
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-content h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin: 2.5rem 0 1rem;
+            color: #34495e;
+        }
+
+        .markdown-content h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem;
+            color: #5a6c7d;
+        }
+
+        .markdown-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.5rem;
+            color: #6c757d;
+        }
+
+        .markdown-content p {
+            margin-bottom: 1.2rem;
+            color: #555;
+        }
+
+        .markdown-content ul, .markdown-content ol {
+            margin-bottom: 1.2rem;
+            padding-left: 2rem;
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid #667eea;
+            background-color: #f8f9ff;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .markdown-content code {
+            background-color: #f1f3f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9em;
+            color: #e74c3c;
+        }
+
+        .markdown-content pre {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .markdown-content pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .markdown-content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+
+        .markdown-content th, .markdown-content td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .markdown-content th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        /* Alertas personalizadas */
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid;
+        }
+
+        .alert-info {
+            background-color: #e3f2fd;
+            border-left-color: #2196f3;
+            color: #0d47a1;
+        }
+
+        .alert-warning {
+            background-color: #fff3e0;
+            border-left-color: #ff9800;
+            color: #e65100;
+        }
+
+        .alert-tip {
+            background-color: #e8f5e8;
+            border-left-color: #4caf50;
+            color: #2e7d32;
+        }
+
+        .alert-danger {
+            background-color: #ffebee;
+            border-left-color: #f44336;
+            color: #c62828;
+        }
+
+        /* Botón de menú móvil */
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .content-wrapper {
+                padding: 2rem 1rem;
+                margin-top: 4rem;
+            }
+
+            .markdown-content h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selección personalizada */
+        ::selection {
+            background-color: rgba(102, 126, 234, 0.2);
+        }
+
+        /* Área de edición de markdown */
+        .markdown-source {
+            display: none;
+        }
+    </style>
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+<body>
+    <!-- Botón de menú móvil -->
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">
+        ☰
+    </button>
+
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">Mi Proyecto</div>
+                <div class="tagline">Documentación técnica</div>
+            </div>
+            
+            <nav class="nav" id="nav-content">
+                <!-- La navegación se genera automáticamente -->
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Aquí puedes escribir tu contenido en Markdown -->
+                <div class="markdown-source" id="markdown-source">
+
+
+# Introducción a Mi Proyecto
+
+[![Amazon Alexa](https://img.shields.io/badge/amazon%20alexa-52b5f7?style=for-the-badge&logo=amazon%20alexa&logoColor=white)](https://google.com)
+
+
+Bienvenido a la documentación de Mi Proyecto. Esta es una solución moderna y eficiente que te permite crear aplicaciones increíbles de manera sencilla.
+
+<iframe width="560" height="315"
+  src="https://www.youtube-nocookie.com/embed/FEa2diI2qgA"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+
+> **Nota:** Esta documentación está en constante actualización. Si encuentras algún error o tienes sugerencias, no dudes en contactarnos.
+
+## ¿Qué es Mi Proyecto?
+
+Mi Proyecto es una herramienta diseñada con las mejores prácticas y tecnologías actuales. Ofrece:
+
+- **Simplicidad**: Interfaz intuitiva y fácil de usar
+- **Flexibilidad**: Configuración adaptable a tus necesidades
+- **Performance**: Optimizado para el mejor rendimiento
+- **Escalabilidad**: Crece con tu proyecto
+
+### Características principales
+
+1. **API RESTful completa**
+2. **Documentación interactiva**
+3. **Autenticación segura**
+4. **Monitoreo en tiempo real**
+
+## Instalación
+
+Para instalar Mi Proyecto, puedes usar tu gestor de paquetes favorito:
+
+### NPM
+```bash
+npm install mi-proyecto
+```
+
+### Yarn
+```bash
+yarn add mi-proyecto
+```
+![a mouse](https://miro.medium.com/v2/format:webp/1*TJGfyvSbpSK6bjvYlsDXkA.png)
+
+### CDN
+
+```mermaid
+graph TD
+  A[Inicio] --> B[Proceso]
+  B --> C[Fin]
+```
+> **Tip:** Recomendamos usar la versión LTS de Node.js para mejor compatibilidad.
+
+## Configuración
+
+Una vez instalado, puedes configurar Mi Proyecto de la siguiente manera:
+
+```javascript
+import MiProyecto from 'mi-proyecto';
+
+const config = {
+  apiKey: 'tu-api-key',
+  environment: 'development',
+  timeout: 5000
+};
+
+const app = new MiProyecto(config);
+```
+
+### Parámetros de configuración
+
+| Parámetro | Tipo | Descripción | Requerido |
+|-----------|------|-------------|-----------|
+| `apiKey` | string | Tu clave de API personal | Sí |
+| `environment` | string | Entorno ('development', 'production') | No |
+| `timeout` | number | Tiempo límite para peticiones (ms) | No |
+
+## Primeros pasos
+
+Con Mi Proyecto configurado, ya puedes comenzar a utilizarlo:
+
+```javascript
+// Inicializar la aplicación
+app.init()
+  .then(() => {
+    console.log('Mi Proyecto inicializado correctamente');
+    return app.getData();
+  })
+  .then(data => {
+    console.log('Datos obtenidos:', data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+```
+
+### Ejemplo completo
+
+```javascript
+import MiProyecto from 'mi-proyecto';
+
+const app = new MiProyecto({
+  apiKey: 'mi-api-key-secreta',
+  environment: 'production'
+});
+
+async function iniciarApp() {
+  try {
+    await app.init();
+    const datos = await app.getData();
+    console.log('Aplicación lista:', datos);
+  } catch (error) {
+    console.error('Error al inicializar:', error);
+  }
+}
+
+iniciarApp();
+```
+
+> **Importante:** Asegúrate de manejar los errores apropiadamente en tu aplicación de producción.
+
+## API Reference
+
+### Métodos principales
+
+#### `init()`
+Inicializa la aplicación y establece la conexión.
+
+```javascript
+await app.init();
+```
+
+#### `getData(options)`
+Obtiene datos del servidor.
+
+```javascript
+const data = await app.getData({
+  limit: 10,
+  offset: 0
+});
+```
+
+#### `createItem(data)`
+Crea un nuevo elemento.
+
+```javascript
+const newItem = await app.createItem({
+  name: 'Mi elemento',
+  description: 'Descripción del elemento'
+});
+```
+
+### Eventos
+
+Mi Proyecto emite varios eventos que puedes escuchar:
+
+```javascript
+app.on('ready', () => {
+  console.log('Aplicación lista');
+});
+
+app.on('error', (error) => {
+  console.error('Error en la aplicación:', error);
+});
+
+app.on('data', (data) => {
+  console.log('Nuevos datos recibidos:', data);
+});
+```
+
+## FAQ
+
+### ¿Cómo obtengo una API key?
+
+Para obtener una API key, regístrate en nuestro portal de desarrolladores y crea un nuevo proyecto.
+
+### ¿Es compatible con TypeScript?
+
+Sí, Mi Proyecto incluye definiciones de tipos TypeScript completas.
+
+### ¿Puedo usar Mi Proyecto en el navegador?
+
+Absolutamente. Mi Proyecto funciona tanto en Node.js como en navegadores modernos.
+
+## Soporte
+
+Si necesitas ayuda o tienes preguntas:
+
+- **Email**: soporte@miproyecto.com
+- **Discord**: [Únete a nuestra comunidad](https://discord.gg/miproyecto)
+- **GitHub**: [Reportar un issue](https://github.com/miproyecto/issues)
+
+---
+
+¡Gracias por usar Mi Proyecto! 🚀
+                </div>
+                
+                <!-- Contenido renderizado -->
+                <div class="markdown-content" id="rendered-content">
+                    <!-- El contenido se renderiza aquí automáticamente -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Librerías necesarias -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
+
+    <script>
+        // Configuración de marked
+        marked.setOptions({
+            breaks: true,
+            gfm: true,
+            highlight: function(code, lang) {
+                return code; // Aquí podrías agregar syntax highlighting
+            }
+        });
+
+        // Función para crear un slug a partir del texto
+        function createSlug(text) {
+            return text
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/[\s_-]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        // Función para generar la navegación automáticamente
+        function generateNavigation(html) {
+            const nav = document.getElementById('nav-content');
+            nav.innerHTML = '';
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            const headings = tempDiv.querySelectorAll('h1, h2, h3, h4');
+            let currentSection = null;
+            
+            headings.forEach((heading, index) => {
+                const level = parseInt(heading.tagName.charAt(1));
+                const text = heading.textContent;
+                const slug = createSlug(text);
+                
+                // Agregar ID al heading
+                heading.id = slug;
+                
+                // Crear enlace de navegación
+                const link = document.createElement('a');
+                link.href = '#' + slug;
+                link.textContent = text;
+                link.className = 'nav-link';
+                
+                // Aplicar clases según el nivel
+                if (level === 1) {
+                    // Crear nueva sección
+                    const section = document.createElement('div');
+                    section.className = 'nav-section';
+                    
+                    const title = document.createElement('div');
+                    title.className = 'nav-title';
+                    title.textContent = text;
+                    section.appendChild(title);
+                    
+                    nav.appendChild(section);
+                    currentSection = section;
+                } else if (level === 2) {
+                    if (currentSection) {
+                        currentSection.appendChild(link);
+                    } else {
+                        nav.appendChild(link);
+                    }
+                } else if (level === 3) {
+                    link.className += ' sub-item';
+                    if (currentSection) {
+                        currentSection.appendChild(link);
+                    } else {
+                        nav.appendChild(link);
+                    }
+                } else if (level === 4) {
+                    link.className += ' sub-sub-item';
+                    if (currentSection) {
+                        currentSection.appendChild(link);
+                    } else {
+                        nav.appendChild(link);
+                    }
+                }
+            });
+            
+            return tempDiv.innerHTML;
+        }
+
+        // Función para procesar alertas personalizadas
+        function processCustomAlerts(html) {
+            // Convertir blockquotes con patrones específicos en alertas
+            html = html.replace(/<blockquote>\s*<p><strong>Nota:<\/strong>(.*?)<\/p>\s*<\/blockquote>/g, 
+                '<div class="alert alert-info"><strong>Nota:</strong>$1</div>');
+            
+            html = html.replace(/<blockquote>\s*<p><strong>Tip:<\/strong>(.*?)<\/p>\s*<\/blockquote>/g, 
+                '<div class="alert alert-tip"><strong>Tip:</strong>$1</div>');
+            
+            html = html.replace(/<blockquote>\s*<p><strong>Importante:<\/strong>(.*?)<\/p>\s*<\/blockquote>/g, 
+                '<div class="alert alert-warning"><strong>Importante:</strong>$1</div>');
+            
+            html = html.replace(/<blockquote>\s*<p><strong>Peligro:<\/strong>(.*?)<\/p>\s*<\/blockquote>/g, 
+                '<div class="alert alert-danger"><strong>Peligro:</strong>$1</div>');
+            
+            return html;
+        }
+
+        // Función principal para renderizar markdown
+        function renderMarkdown() {
+            const markdownSource = document.getElementById('markdown-source').innerHTML;
+
+            const renderedContent = document.getElementById('rendered-content');
+            
+            // Convertir markdown a HTML
+            let html = marked.parse(markdownSource);
+            
+            // Procesar alertas personalizadas
+            html = processCustomAlerts(html);
+            
+            // Generar navegación y actualizar IDs
+            html = generateNavigation(html);
+            
+            /* JavaScript - dentro de renderMarkdown() */
+html = html.replace(/<pre><code class="language-mermaid">([\s\S]*?)<\/code><\/pre>/g, (_, code) => {
+    const decoded = code
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&amp;/g, '&');
+    return `<div class="mermaid">${decoded}</div>`;
+});
+
+            // Sanitizar HTML
+            html = DOMPurify.sanitize(html, {
+  ADD_TAGS: ['iframe'],
+  ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling', 'src', 'title', 'width', 'height']
+});
+            
+            // Insertar en el DOM
+            renderedContent.innerHTML = html;
+            
+            // Configurar navegación
+            setupNavigation();
+        }
+
+        // Función para configurar la navegación
+        function setupNavigation() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                    
+                    // Cerrar sidebar en móvil
+                    if (window.innerWidth <= 768) {
+                        document.getElementById('sidebar').classList.remove('open');
+                    }
+                });
+            });
+        }
+
+        // Función para actualizar navegación activa
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.pageYOffset >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Función para alternar sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMarkdown();
+            
+            // Configurar scroll spy
+            window.addEventListener('scroll', updateActiveNav);
+            window.addEventListener('load', updateActiveNav);
+            
+            // Cerrar sidebar al hacer clic fuera
+            document.addEventListener('click', function(event) {
+                const sidebar = document.getElementById('sidebar');
+                const menuBtn = document.querySelector('.mobile-menu-btn');
+                
+                if (window.innerWidth <= 768 && 
+                    !sidebar.contains(event.target) && 
+                    !menuBtn.contains(event.target) && 
+                    sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

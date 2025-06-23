@@ -1,0 +1,71 @@
+title = 'Decisiones Estratégicas con IA - Quinta Parte'
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es la ventaja principal de usar un flujo de decisiones con IA en lugar de un proceso tradicional?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Permite crear dashboards bonitos', correct = false },
+    { content.Text = 'Reduce el tiempo de análisis a decisiones de días a minutos', correct = true },
+    { content.Text = 'Evita el uso de hojas de cálculo', correct = false },
+    { content.Text = 'Es más costoso pero moderno', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es el objetivo del visor estratégico creado con IA generativa?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Mostrar los datos sin analizarlos', correct = false },
+    { content.Text = 'Simular datos falsos para entrenamiento', correct = false },
+    { content.Text = 'Identificar patrones, correlaciones y proyecciones en tiempo real', correct = true },
+    { content.Text = 'Permitir edición colaborativa de archivos CSV', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué rol cumple el “Abogado del Diablo” en el análisis estratégico con IA?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Validar que el código HTML esté bien escrito', correct = false },
+    { content.Text = 'Desafiar las recomendaciones con argumentos contrarios y escenarios de fallo', correct = true },
+    { content.Text = 'Optimizar la presentación para dispositivos móviles', correct = false },
+    { content.Text = 'Revisar ortografía en el informe PDF', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué diferencia clave hay entre métricas leading y lagging en este contexto?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Leading predicen, lagging confirman resultados', correct = true },
+    { content.Text = 'Leading son más confiables que lagging', correct = false },
+    { content.Text = 'Lagging no se usan en IA', correct = false },
+    { content.Text = 'No hay diferencia, solo nombres distintos', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es la principal consecuencia de no adoptar un flujo de decisiones con IA en los próximos 12 meses?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Pérdida de tiempo al crear dashboards', correct = false },
+    { content.Text = 'Mayor necesidad de programadores', correct = false },
+    { content.Text = 'Riesgo de obsolescencia estratégica y competitiva', correct = true },
+    { content.Text = 'Costos en licencias de software tradicional', correct = false },
+]

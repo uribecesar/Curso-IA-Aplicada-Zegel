@@ -1,0 +1,41 @@
+Fecha,Empleado,Departamento,Categoría,Monto (USD),Descripción,Medio de Pago
+2025-04-08,María Fernández,Marketing,Entretenimiento,1456.37,Taxi aeropuerto,Reembolso Personal
+2025-05-30,Luis Martínez,Finanzas,Transporte,975.01,Vuelo nacional,Efectivo
+2025-05-07,María Fernández,TI,Entretenimiento,312.64,Conferencia sectorial,Tarjeta Corporativa
+2025-01-08,Laura Pérez,Marketing,Alimentación,1482.48,Cena negocios,Tarjeta Corporativa
+2025-03-04,Laura Pérez,TI,Entretenimiento,74.54,Taxi aeropuerto,Tarjeta Corporativa
+2025-01-09,Miguel Sánchez,Recursos Humanos,Viaje,1444.47,Cena con cliente,Reembolso Personal
+2025-06-14,Ana Rodríguez,Recursos Humanos,Transporte,451.58,Almuerzo ejecutivo,Tarjeta Corporativa
+2025-05-08,María Fernández,Recursos Humanos,Transporte,79.45,Taxi aeropuerto,Reembolso Personal
+2025-05-20,Laura Pérez,TI,Hospedaje,1578.34,Vuelo nacional,Tarjeta Corporativa
+2025-05-06,Andrés Ruiz,Finanzas,Hospedaje,404.9,Combustible,Efectivo
+2025-05-29,Camila López,Marketing,Entretenimiento,1835.03,Vuelo nacional,Tarjeta Corporativa
+2025-03-23,Camila López,Recursos Humanos,Entretenimiento,1146.29,Almuerzo ejecutivo,Reembolso Personal
+2025-01-27,Miguel Sánchez,Ventas,Alimentación,335.5,Almuerzo ejecutivo,Reembolso Personal
+2025-04-30,Jorge Herrera,Finanzas,Transporte,953.02,Vuelo nacional,Tarjeta Corporativa
+2025-02-22,Sofía Díaz,Recursos Humanos,Alimentación,1456.74,Coffee break,Tarjeta Corporativa
+2025-02-07,Sofía Díaz,Recursos Humanos,Entretenimiento,1366.68,Cena con cliente,Efectivo
+2025-02-08,Ana Rodríguez,Recursos Humanos,Entretenimiento,955.62,Cena con cliente,Tarjeta Corporativa
+2025-02-17,Miguel Sánchez,Marketing,Alimentación,888.36,Cena negocios,Tarjeta Corporativa
+2025-03-29,Ana Rodríguez,Recursos Humanos,Entretenimiento,1506.21,Vuelo nacional,Reembolso Personal
+2025-03-05,Ana Rodríguez,Marketing,Hospedaje,432.38,Taxi aeropuerto,Tarjeta Corporativa
+2025-02-24,Ana Rodríguez,Recursos Humanos,Entretenimiento,243.81,Almuerzo ejecutivo,Efectivo
+2025-04-07,Ana Rodríguez,Ventas,Entretenimiento,820.86,Coffee break,Tarjeta Corporativa
+2025-02-24,Ana Rodríguez,Ventas,Entretenimiento,204.29,Cena negocios,Reembolso Personal
+2025-04-15,Camila López,Recursos Humanos,Entretenimiento,347.55,Cena con cliente,Reembolso Personal
+2025-04-30,Luis Martínez,Recursos Humanos,Viaje,1341.27,Reunión equipo,Efectivo
+2025-06-09,Luis Martínez,Recursos Humanos,Entretenimiento,461.8,Reunión equipo,Tarjeta Corporativa
+2025-05-05,Luis Martínez,Finanzas,Alimentación,1272.11,Reunión equipo,Efectivo
+2025-05-15,Jorge Herrera,Finanzas,Hospedaje,1976.82,Coffee break,Tarjeta Corporativa
+2025-06-19,Andrés Ruiz,TI,Transporte,1423.58,Cena negocios,Tarjeta Corporativa
+2025-06-11,Camila López,TI,Entretenimiento,1419.95,Estancia hotel,Reembolso Personal
+2025-03-24,Laura Pérez,Finanzas,Alimentación,757.88,Cena negocios,Reembolso Personal
+2025-01-05,Camila López,Ventas,Transporte,698.57,Conferencia sectorial,Tarjeta Corporativa
+2025-03-07,Sofía Díaz,Marketing,Viaje,1372.78,Reunión equipo,Tarjeta Corporativa
+2025-05-02,Sofía Díaz,Marketing,Hospedaje,173.88,Reunión equipo,Reembolso Personal
+2025-04-04,Carlos Gómez,Marketing,Viaje,1529.52,Vuelo nacional,Tarjeta Corporativa
+2025-01-04,Ana Rodríguez,Recursos Humanos,Entretenimiento,1677.66,Cena negocios,Reembolso Personal
+2025-03-03,Sofía Díaz,Finanzas,Alimentación,515.35,Almuerzo ejecutivo,Efectivo
+2025-02-11,Camila López,Finanzas,Alimentación,425.2,Estancia hotel,Tarjeta Corporativa
+2025-04-11,María Fernández,TI,Viaje,599.01,Almuerzo ejecutivo,Tarjeta Corporativa
+2025-03-15,Carlos Gómez,Ventas,Alimentación,915.09,Coffee break,Efectivo

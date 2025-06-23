@@ -1,0 +1,33 @@
+
+Elaboraras 5 preguntas  y debolveras un  codigo con esta composisiocn 
+ maxima cantidad de carateras por preguntas 200:
+
+title = 'Titulo del quiz'
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = 'Pregunta 1 opcion multiple'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+
+
+answers = [
+	{ content.Text = 'Alternativa 1', correct = false },
+	{ content.Text = 'Alternativa 2', correct = true },
+	{ content.Text = 'Alternativa 3', correct = false },
+	{ content.Text = 'Alternativa 4', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = 'Pregunta 2 Verdero o falso'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+	{ content.Text = 'Verdadero', correct = false },
+	{ content.Text = 'Falso', correct = true },
+]

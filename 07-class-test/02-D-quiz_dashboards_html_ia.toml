@@ -1,0 +1,71 @@
+title = 'Dashboards HTML Profesionales con IA Generativa'
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es una ventaja principal de usar IA para crear dashboards HTML?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Requiere dominio avanzado de JavaScript', correct = false },
+    { content.Text = 'Permite generar dashboards profesionales con instrucciones en lenguaje natural', correct = true },
+    { content.Text = 'Solo funciona con datasets pequeños', correct = false },
+    { content.Text = 'Limita las opciones de personalización', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué tecnología permite crear gráficos visuales dentro de un dashboard HTML generado con IA?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Bootstrap', correct = false },
+    { content.Text = 'Chart.js', correct = true },
+    { content.Text = 'React Native', correct = false },
+    { content.Text = 'Notion', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué hace a los dashboards IA + HTML más adaptables que PowerPoint o Excel?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Su capacidad de conectarse a redes sociales', correct = false },
+    { content.Text = 'Son interactivos, personalizables y responsivos para todo dispositivo', correct = true },
+    { content.Text = 'Usan macros automatizadas', correct = false },
+    { content.Text = 'Se actualizan con solo abrirlos', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es una buena práctica al preparar tu dataset para dashboards con IA?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Convertir los datos en imágenes', correct = false },
+    { content.Text = 'Crear un archivo CSV limpio y estructurado', correct = true },
+    { content.Text = 'Guardar los datos como documento PDF', correct = false },
+    { content.Text = 'Subir los datos sin revisar', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué representa mejor el nuevo rol del profesional que usa IA para dashboards?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Dependencia completa del área de TI', correct = false },
+    { content.Text = 'Ejecutor de tareas repetitivas en Excel', correct = false },
+    { content.Text = 'Orquestador estratégico con herramientas accesibles', correct = true },
+    { content.Text = 'Programador senior de backend', correct = false },
+]

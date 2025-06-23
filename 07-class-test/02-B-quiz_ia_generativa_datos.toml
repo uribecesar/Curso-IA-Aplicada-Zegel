@@ -1,0 +1,71 @@
+title = 'IA Generativa y Análisis de Datos: Segunda Parte'
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué es el análisis de datos?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Un conjunto de gráficos y visuales', correct = false },
+    { content.Text = 'Proceso para convertir datos en insights útiles', correct = true },
+    { content.Text = 'Una base de datos centralizada', correct = false },
+    { content.Text = 'Una etapa del marketing digital', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es la función principal de un Data Warehouse?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Almacenar y procesar datos en tiempo real', correct = false },
+    { content.Text = 'Repositorio para análisis estructurado y lectura', correct = true },
+    { content.Text = 'Reemplazar las hojas de cálculo', correct = false },
+    { content.Text = 'Gestionar redes neuronales', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué describe mejor el proceso ETL en BI?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Extraer, traducir, lanzar', correct = false },
+    { content.Text = 'Exportar, transformar, localizar', correct = false },
+    { content.Text = 'Extraer, transformar y cargar datos', correct = true },
+    { content.Text = 'Ejecutar, transmitir, limpiar', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué tipo de gráfico usarías para mostrar tendencias temporales?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Gráfico de pastel', correct = false },
+    { content.Text = 'Gráfico de líneas', correct = true },
+    { content.Text = 'Gráfico de barras', correct = false },
+    { content.Text = 'Gráfico de dispersión', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es una ventaja clave de usar IA como analista directo?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+    { content.Text = 'Análisis conversacional en minutos', correct = true },
+    { content.Text = 'Requiere alta programación', correct = false },
+    { content.Text = 'Genera reportes en papel', correct = false },
+    { content.Text = 'Accede solo a datos estructurados', correct = false },
+]

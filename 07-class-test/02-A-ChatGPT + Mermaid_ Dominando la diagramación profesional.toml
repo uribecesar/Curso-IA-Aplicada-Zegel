@@ -1,0 +1,72 @@
+
+title = 'ChatGPT + Mermaid: Dominando la diagramación profesional'
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál de estas combinaciones NO genera diagramas desde texto plano?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+	{ content.Text = 'ChatGPT + Mermaid', correct = false },
+	{ content.Text = 'Claude + Mermaid', correct = false },
+	{ content.Text = 'Gemini + Mermaid', correct = false },
+	{ content.Text = 'Diagram.net + Mermaid', correct = true },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué hace única la dupla ChatGPT + Mermaid frente a otras herramientas?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+	{ content.Text = 'Genera diagramas sin descripción', correct = false },
+	{ content.Text = 'Traduce lenguaje natural a código gráfico', correct = true },
+	{ content.Text = 'Tiene más plantillas que Canva', correct = false },
+	{ content.Text = 'Se integra con Word automáticamente', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Cuál es el ahorro estimado de tiempo usando IA + Mermaid?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+	{ content.Text = '25 %', correct = false },
+	{ content.Text = '30 %', correct = false },
+	{ content.Text = '85 %', correct = true },
+	{ content.Text = '10 %', correct = false },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué formato NO genera Mermaid de forma directa?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+	{ content.Text = 'PNG', correct = false },
+	{ content.Text = 'SVG', correct = false },
+	{ content.Text = 'Markdown', correct = false },
+	{ content.Text = 'PDF', correct = true },
+]
+
+[[slides]]
+
+[slides.MultipleChoice]
+title = '¿Qué paso depende más del criterio del usuario en el flujo Mermaid?'
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+answers = [
+	{ content.Text = 'Copiar código Mermaid', correct = false },
+	{ content.Text = 'Exportar a imagen', correct = false },
+	{ content.Text = 'Describir el proceso', correct = true },
+	{ content.Text = 'Renderizar en mermaid.live', correct = false },
+]
