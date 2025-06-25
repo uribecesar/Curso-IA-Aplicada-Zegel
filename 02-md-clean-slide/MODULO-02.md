@@ -7,7 +7,11 @@ header: IA Apliciada Segunda Sesión
 ---
 
 # 🤖 Inteligencia Artificial Aplicada
-[Ing. Cesar Uribe](https://lab.zildar.com/)
+
+
+| Docente | Web |
+| ------------- | ------------- |
+|🧑‍🏫 [Ing. Cesar Uribe](https://www.linkedin.com/in/uribealvites/)  | [https://lab.zildar.com](https://lab.zildar.com)  |
 
 ---
 

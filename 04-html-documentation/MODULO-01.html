@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación -  IA Aplicada</title>
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(135deg, #6e71c4 0%, #764ba2 100%);
+            color: white;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Navegación */
+        .nav {
+            padding: 1rem 0;
+        }
+
+        .nav-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0 1.5rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-left-color: rgba(255,255,255,0.5);
+            transform: translateX(5px);
+        }
+
+        .nav-link.active {
+            background-color: rgba(255,255,255,0.15);
+            border-left-color: white;
+            font-weight: 500;
+        }
+
+        .nav-link.sub-item {
+            padding-left: 2.5rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-link.sub-sub-item {
+            padding-left: 3.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Estilos para el contenido renderizado */
+        .markdown-content h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #e5e5e5;
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-content h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin: 2.5rem 0 1rem;
+            color: #34495e;
+        }
+
+        .markdown-content h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem;
+            color: #5a6c7d;
+        }
+
+        .markdown-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.5rem;
+            color: #6c757d;
+        }
+
+        .markdown-content p {
+            margin-bottom: 1.2rem;
+            color: #555;
+        }
+
+        .markdown-content ul, .markdown-content ol {
+            margin-bottom: 1.2rem;
+            padding-left: 2rem;
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid #667eea;
+            background-color: #f8f9ff;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .markdown-content code {
+            background-color: #f1f3f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9em;
+            color: #e74c3c;
+        }
+
+        .markdown-content pre {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .markdown-content pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .markdown-content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+
+        .markdown-content th, .markdown-content td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .markdown-content th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        /* Alertas personalizadas */
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid;
+        }
+
+        .alert-info {
+            background-color: #e3f2fd;
+            border-left-color: #2196f3;
+            color: #0d47a1;
+        }
+
+        .alert-warning {
+            background-color: #fff3e0;
+            border-left-color: #ff9800;
+            color: #e65100;
+        }
+
+        .alert-tip {
+            background-color: #e8f5e8;
+            border-left-color: #4caf50;
+            color: #2e7d32;
+        }
+
+        .alert-danger {
+            background-color: #ffebee;
+            border-left-color: #f44336;
+            color: #c62828;
+        }
+
+        /* Botón de menú móvil */
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .content-wrapper {
+                padding: 2rem 1rem;
+                margin-top: 4rem;
+            }
+
+            .markdown-content h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selección personalizada */
+        ::selection {
+            background-color: rgba(102, 126, 234, 0.2);
+        }
+
+        /* Área de edición de markdown */
+        .markdown-source {
+            display: none;
+        }
+    </style>
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+<body>
+    <!-- Botón de menú móvil -->
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">
+        ☰
+    </button>
+
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">IA APLICADA</div>
+                <div class="tagline">DOCUMENTACIÓN</div>
+            </div>
+            
+            <nav class="nav" id="nav-content">
+                <!-- La navegación se genera automáticamente -->
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Aquí puedes escribir tu contenido en Markdown -->
+                <div class="markdown-source" id="markdown-source">
+
+
+# 📋 Ficha de Ejercicios y Actividades
+## Primera Sesión: Fundamentos de Inteligencia Artificial
+**Docente:** Ing. Cesar Uribe | [LinkedIn](https://www.linkedin.com/in/uribealvites/)  
+**Web:** [https://lab.zildar.com](https://lab.zildar.com)
+
+---
+
+## 📚 Índice de Ejercicios
+
+### 🚀 **BLOQUE 1: Tu Entrada al Futuro Digital**
+- Ejercicio 1.1: Primer Contacto Profesional
+- Ejercicio 1.2: Comparativa de Plataformas 
+- Ejercicio 1.3: Mapeo de Oportunidades Personales
+
+### 🏛️ **BLOQUE 2: Framework OSAC**
+- Ejercicio 2.1: Transformación de Prompt Amateur
+- Ejercicio 2.2: Toolkit Personal OSAC
+- Ejercicio 2.3: Caso Real Gerencial
+
+### ⚡ **BLOQUE 3: Técnicas Avanzadas**
+- Ejercicio 3.1: Proyecto Dividir y Vencer
+- Ejercicio 3.2: Configuración Ecosistema TTS+STT
+- Ejercicio 3.3: Comparativa de Métodos en Vivo
+
+### 🧠 **BLOQUE 4: Metodología C.R.E.A**
+- Ejercicio 4.1: Implementación C.R.E.A Completa
+- Ejercicio 4.2: Diagnóstico de Dependencia Cognitiva
+- Ejercicio 4.3: Proyecto de Thought Leadership
+
+---
+
+# 🚀 BLOQUE 1: Tu Entrada al Futuro Digital
+
+## Ejercicio 1.1: Primer Contacto Profesional
+
+**⏰ Tiempo:** 20 minutos  
+**👥 Modalidad:** Individual  
+**🛠️ Herramientas:** ChatGPT (versión gratuita)
+
+### 📋 Enunciado del Caso
+
+Eres un profesional que nunca ha usado IA generativa de manera sistemática. Tu jefe te ha pedido que explores cómo la IA podría impactar tu área de trabajo específica y presentes un resumen de 5 minutos en la próxima reunión de equipo.
+
+**Situación específica:**
+- Campo profesional: [Tu área actual de trabajo]
+- Audiencia: Tu equipo directo (5-8 personas)
+- Objetivo: Identificar 3 aplicaciones concretas de IA en tu trabajo diario
+- Restricción: Solo puedes usar herramientas gratuitas
+
+### ✅ Criterios de Éxito
+1. Identifica al menos 3 aplicaciones específicas (no genéricas)
+2. Evalúa la relevancia de cada aplicación para tu contexto
+3. Determina cuál sería tu primer paso de implementación
+4. Documenta tu experiencia inicial con la herramienta
+
+### 🎓 Objetivo de Aprendizaje
+- Experimentar el primer contacto con IA generativa
+- Evaluar la aplicabilidad inmediata en contexto profesional real
+- Desarrollar criterios personales de evaluación de utilidad
+
+---
+
+## Ejercicio 1.2: Comparativa de Plataformas
+
+**⏰ Tiempo:** 35 minutos  
+**👥 Modalidad:** Individual con presentación grupal  
+**🛠️ Herramientas:** ChatGPT, Claude, Gemini (cuentas gratuitas)
+
+### 📋 Enunciado del Caso
+
+Tu empresa está considerando adquirir una suscripción premium de IA generativa para el equipo. Como responsable de la evaluación técnica, debes comparar las 3 plataformas principales y recomendar cuál se adapta mejor a las necesidades específicas de tu organización.
+
+**Contexto empresarial:**
+- Tipo de empresa: [Definir según participante]
+- Tamaño del equipo: 15-25 personas
+- Uso principal: Redacción profesional, análisis y presentaciones
+- Presupuesto: $300-500 mensuales para todo el equipo
+- Decisión requerida: En 2 semanas
+
+### ✅ Criterios de Éxito
+1. Prueba la misma tarea en las 3 plataformas
+2. Evalúa: calidad, facilidad de uso, relevancia para tu sector
+3. Identifica fortalezas y debilidades específicas de cada una
+4. Hace una recomendación fundamentada con justificación
+5. Presenta hallazgos en 3 minutos al grupo
+
+### 🎓 Objetivo de Aprendizaje
+- Desarrollar criterios profesionales de evaluación de IA
+- Experimentar diferencias reales entre plataformas
+- Practicar justificación de decisiones tecnológicas
+
+---
+
+## Ejercicio 1.3: Mapeo de Oportunidades Personales
+
+**⏰ Tiempo:** 25 minutos  
+**👥 Modalidad:** Individual con discusión en parejas  
+**🛠️ Herramientas:** Cualquier IA + plantilla de análisis
+
+### 📋 Enunciado del Caso
+
+Has asistido a esta sesión de IA y ahora necesitas crear un plan personal de implementación. Tu objetivo es identificar dónde la IA puede generar el mayor impacto en tu productividad personal y desarrollo profesional en los próximos 30 días.
+
+**Tu situación:**
+- Tienes 3-5 tareas recurrentes que consumen tiempo significativo
+- Dispones de 2-3 horas semanales para experimentar con IA
+- Necesitas mostrar resultados medibles a tu supervisor en 1 mes
+- Debes mantener la calidad actual de tus deliverables
+
+**Entregable requerido:**
+Plan de implementación de 30 días con métricas específicas de éxito.
+
+### ✅ Criterios de Éxito
+1. Identifica 3-5 tareas específicas para automatizar/mejorar
+2. Prioriza por impacto potencial vs. facilidad de implementación
+3. Define métricas concretas de éxito (tiempo ahorrado, calidad mejorada)
+4. Establece cronograma realista de implementación
+5. Identifica potenciales obstáculos y soluciones
+
+### 🎓 Objetivo de Aprendizaje
+- Desarrollar pensamiento estratégico sobre adopción de IA
+- Practicar planificación de cambio tecnológico personal
+- Establecer bases para implementación sistemática
+
+---
+
+# 🏛️ BLOQUE 2: Framework OSAC
+
+## Ejercicio 2.1: Transformación de Prompt Amateur
+
+**⏰ Tiempo:** 15 minutos  
+**👥 Modalidad:** Individual  
+**🛠️ Herramientas:** Claude o ChatGPT
+
+### 📋 Enunciado del Caso
+
+Un colega junior te muestra este prompt que ha estado usando sin buenos resultados:
+
+**"Escribe un informe sobre la implementación de software nuevo en nuestra empresa para presentar a los gerentes"**
+
+Como experto en IA que acabas de aprender el framework OSAC, debes:
+1. Transformar este prompt amateur en uno profesional
+2. Probar ambas versiones con la misma IA
+3. Documentar las diferencias en calidad y utilidad
+
+**Contexto que debes asumir:**
+- Empresa: Manufactura textil, 150 empleados
+- Software: Sistema ERP para reemplazar Excel
+- Audiencia: 3 gerentes departamentales
+- Objetivo: Aprobación de presupuesto $45K
+- Timeline: Implementación en 6 meses
+
+### ✅ Criterios de Éxito
+1. Aplica correctamente los 4 componentes OSAC
+2. El prompt transformado es específico y contextualizado
+3. La diferencia de calidad entre ambas versiones es notable
+4. Documenta tiempo de iteraciones necesarias en cada caso
+5. El resultado final es directamente presentable
+
+### 🎓 Objetivo de Aprendizaje
+- Aplicar framework OSAC en caso real
+- Experimentar la diferencia cuantificable de calidad
+- Desarrollar habilidad de estructuración de prompts
+
+---
+
+## Ejercicio 2.2: Toolkit Personal OSAC
+
+**⏰ Tiempo:** 30 minutos  
+**👥 Modalidad:** Individual  
+**🛠️ Herramientas:** Herramienta IA preferida + plantilla
+
+### 📋 Enunciado del Caso
+
+Tu departamento ha decidido adoptar IA de manera sistemática. Como pionero en el equipo, te han encargado crear un "toolkit" de prompts OSAC que otros colegas puedan usar inmediatamente para las tareas más comunes del área.
+
+**Requerimientos del toolkit:**
+- 5-8 prompts OSAC listos para usar
+- Enfocados en tareas específicas de tu área profesional
+- Que ahorren al menos 30 minutos por uso
+- Que produzcan resultados de calidad profesional consistente
+- Con instrucciones claras para colegas menos expertos en IA
+
+**Entregable:**
+Documento reutilizable para todo el equipo con prompts probados.
+
+### ✅ Criterios de Éxito
+1. Identifica 5-8 tareas frecuentes y de alto valor en tu área
+2. Crea prompts OSAC específicos y probados para cada tarea
+3. Documenta tiempo ahorrado y calidad esperada
+4. Incluye instrucciones claras para uso por otros
+5. Valida al menos 3 prompts con casos reales
+
+### 🎓 Objetivo de Aprendizaje
+- Sistematizar el uso profesional de IA
+- Crear recursos reutilizables y escalables
+- Desarrollar mentalidad de multiplicador de conocimiento
+
+---
+
+## Ejercicio 2.3: Caso Real Gerencial
+
+**⏰ Tiempo:** 25 minutos  
+**👥 Modalidad:** Individual con presentación al grupo  
+**🛠️ Herramientas:** IA de preferencia
+
+### 📋 Enunciado del Caso
+
+**Situación:** Eres Gerente de Operaciones en una empresa de servicios financieros. El CEO te ha solicitado un análisis de viabilidad para implementar trabajo híbrido (3 días oficina, 2 días remoto) para todo el personal administrativo (85 personas).
+
+**Detalles específicos:**
+- La empresa tiene 3 oficinas en diferentes distritos de Lima
+- Personal administrativo actual: 85 personas (edades 25-55 años)
+- Cultura organizacional: Tradicionalmente presencial
+- Preocupaciones principales: productividad, seguridad de datos, cohesión de equipo
+- Timeline: Decisión requerida en 15 días
+- Presupuesto disponible: $25K para infraestructura tecnológica
+
+**Tu tarea:**
+Crear un análisis ejecutivo completo usando framework OSAC que aborde todas las dimensiones del problema y proporcione una recomendación clara.
+
+### ✅ Criterios de Éxito
+1. Utiliza OSAC para estructurar el análisis completo
+2. Aborda todas las preocupaciones mencionadas con evidencia
+3. Proporciona recomendación clara con justificación
+4. Incluye plan de implementación específico
+5. El documento es presentable directamente al CEO
+6. Presenta resumen de 3 minutos al grupo
+
+### 🎓 Objetivo de Aprendizaje
+- Aplicar OSAC en caso ejecutivo complejo
+- Integrar múltiples perspectivas en análisis cohesivo
+- Desarrollar capacidad de síntesis estratégica con IA
+
+---
+
+# ⚡ BLOQUE 3: Técnicas Avanzadas
+
+## Ejercicio 3.1: Proyecto Dividir y Vencer
+
+**⏰ Tiempo:** 40 minutos  
+**👥 Modalidad:** Individual  
+**🛠️ Herramientas:** Claude (recomendado por mejor contexto)
+
+### 📋 Enunciado del Caso
+
+**Desafío:** Tu empresa consultora ha ganado un proyecto para crear un "Manual de Mejores Prácticas de Atención al Cliente" para una cadena de restaurantes con 15 locales. El manual debe tener 4,000-5,000 palabras y ser utilizado para entrenar a 120 empleados de diferentes niveles educativos.
+
+**Especificaciones del manual:**
+- Audiencia: Personal de meseros, cajeros y supervisores
+- Objetivo: Estandarizar servicio en todos los locales
+- Tono: Profesional pero accesible
+- Debe incluir: protocolos, scripts, casos prácticos
+- Tiempo de entrega: Final del día de hoy
+- Restricción: No puedes usar método tradicional (prompt único)
+
+**Tu tarea:**
+Implementar metodología "Dividir y Vencer" para completar el proyecto en el tiempo disponible.
+
+### ✅ Criterios de Éxito
+1. Crea hoja de ruta detallada antes de generar contenido
+2. Segmenta en secciones de 600-800 palabras máximo
+3. Mantiene coherencia entre todas las secciones
+4. El manual final es directamente utilizable para entrenamiento
+5. Documenta tiempo invertido vs. estimación método tradicional
+6. Aplica técnicas de cohesión conversacional
+
+### 🎓 Objetivo de Aprendizaje
+- Dominar metodología dividir y vencer en proyecto real
+- Gestionar límites técnicos de manera estratégica
+- Desarrollar capacidad de planificación de contenido extenso
+
+---
+
+## Ejercicio 3.2: Configuración Ecosistema TTS+STT
+
+**⏰ Tiempo:** 30 minutos  
+**👥 Modalidad:** Individual con validación en parejas  
+**🛠️ Herramientas:** Windows, Edge, herramientas gratuitas
+
+### 📋 Enunciado del Caso
+
+Tu productividad con IA ha mejorado significativamente, pero aún inviertes mucho tiempo escribiendo prompts largos y revisando contenido extenso. Has decidido implementar un ecosistema completo TTS (Text-to-Speech) + STT (Speech-to-Text) para multiplicar tu eficiencia.
+
+**Objetivo del ejercicio:**
+Configurar y dominar un flujo de trabajo completamente por voz donde puedas:
+1. Dictar prompts complejos sin escribir
+2. Revisar contenido largo escuchando
+3. Hacer correcciones por voz
+4. Completar proyectos de IA con mínimo uso de teclado
+
+**Reto específico:**
+Al final del ejercicio, debes ser capaz de crear un prompt OSAC de 200+ palabras y revisar el resultado completamente por voz, sin usar teclado para el contenido principal.
+
+### ✅ Criterios de Éxito
+1. Configura exitosamente Microsoft Edge TTS
+2. Activa y entrena Windows Speech Recognition
+3. Dicta un prompt OSAC complejo (200+ palabras) solo por voz
+4. Revisa auditivamente el contenido generado
+5. Hace al menos 2 correcciones usando solo STT
+6. Valida con un compañero que el flujo es eficiente
+7. Documenta mejora de velocidad vs. método manual
+
+### 🎓 Objetivo de Aprendizaje
+- Implementar herramientas complementarias de productividad
+- Desarrollar flujos de trabajo optimizados
+- Multiplicar eficiencia operativa con IA
+
+---
+
+## Ejercicio 3.3: Comparativa de Métodos en Vivo
+
+**⏰ Tiempo:** 45 minutos (22.5 min cada método)  
+**👥 Modalidad:** Individual con discusión grupal final  
+**🛠️ Herramientas:** IA de preferencia + cronómetro
+
+### 📋 Enunciado del Caso
+
+Como consultor independiente, un cliente potencial te ha solicitado una propuesta comercial completa para un proyecto de transformación digital. Necesitas demostrar a ti mismo cuál metodología (tradicional vs. dividir y vencer) te da mejores resultados en tiempo real.
+
+**Especificaciones de la propuesta:**
+- Cliente: Empresa de logística, 80 empleados
+- Proyecto: Digitalización de procesos de inventario y distribución
+- Propuesta debe incluir: diagnóstico, solución, timeline, presupuesto, equipo
+- Extensión objetivo: 2,500-3,000 palabras
+- Nivel: Presentable directamente al gerente general
+
+**Metodología del experimento:**
+1. **Parte A (22.5 min):** Método tradicional (prompt único máximo detalle posible)
+2. **Parte B (22.5 min):** Método dividir y vencer con planificación previa
+
+### ✅ Criterios de Éxito
+1. Completa ambas versiones en el tiempo asignado
+2. Documenta métricas específicas para cada método:
+   - Tiempo efectivo de generación
+   - Número de iteraciones necesarias
+   - Calidad del resultado final (1-10)
+   - Nivel de frustración experimentado (1-10)
+   - Porcentaje utilizable sin edición
+3. Identifica diferencias específicas en los resultados
+4. Presenta conclusiones al grupo en 3 minutos
+5. Hace recomendación personal basada en evidencia
+
+### 🎓 Objetivo de Aprendizaje
+- Validar empíricamente la efectividad de metodologías
+- Desarrollar criterios de evaluación basados en evidencia
+- Integrar aprendizajes para optimización personal
+
+---
+
+# 🧠 BLOQUE 4: Metodología C.R.E.A
+
+## Ejercicio 4.1: Implementación C.R.E.A Completa
+
+**⏰ Tiempo:** 60 minutos  
+**👥 Modalidad:** Individual con checkpoint grupal  
+**🛠️ Herramientas:** IA + herramientas de investigación
+
+### 📋 Enunciado del Caso
+
+**Situación:** Tu empresa te ha seleccionado para representarla en un panel de expertos sobre "El Futuro de [Tu Industria] en la Era Digital" en una conferencia sectorial importante. Necesitas desarrollar una posición experta única que establezca tu autoridad y la de tu empresa como thought leaders.
+
+**Requerimientos del panel:**
+- Presentación de 8 minutos sobre tu perspectiva única
+- Audiencia: 200+ profesionales senior de tu sector
+- Objetivo: Posicionar a tu empresa como innovadora y visionaria
+- Diferenciador: Tu análisis debe aportar insights que otros panelistas no han considerado
+- Timeline: El panel es en 2 semanas
+
+**Tu reto:**
+Usar metodología C.R.E.A completa para desarrollar una perspectiva genuinamente original que refleje tu expertise y experiencia, amplificada (no reemplazada) por IA.
+
+**Proceso requerido:**
+- **COMPILAR:** Investigar estado actual y tendencias
+- **REFLEXIONAR:** Desarrollar perspectivas únicas desde tu experiencia
+- **ESTRUCTURAR:** Organizar argumentos de manera convincente
+- **AMPLIFICAR:** Expandir con IA preservando tu autoría intelectual
+
+### ✅ Criterios de Éxito
+1. **Fase COMPILAR:** Identifica 15+ fuentes relevantes y actuales
+2. **Fase REFLEXIONAR:** Genera al menos 3 insights únicos desde tu experiencia
+3. **Fase ESTRUCTURAR:** Crea arquitectura argumental coherente y persuasiva
+4. **Fase AMPLIFICAR:** Expande preservando 100% tu voz intelectual
+5. **Resultado final:** Contenido reconociblemente tuyo, con valor único
+6. **Validación:** Otro participante confirma que "solo tú podrías haber escrito esto"
+
+### 🎓 Objetivo de Aprendizaje
+- Dominar metodología C.R.E.A en proyecto estratégico
+- Desarrollar capacidad de thought leadership genuino
+- Preservar y amplificar autoría intelectual con IA
+
+---
+
+## Ejercicio 4.2: Diagnóstico de Dependencia Cognitiva
+
+**⏰ Tiempo:** 25 minutos  
+**👥 Modalidad:** Individual con reflexión grupal  
+**🛠️ Herramientas:** IA para análisis + autoevaluación
+
+### 📋 Enunciado del Caso
+
+**Contexto:** Después de varias semanas usando IA, has notado que algunas veces sientes inseguridad para abordar tareas complejas sin asistencia de IA. Decides realizar un diagnóstico honesto de tu nivel de dependencia cognitiva para tomar medidas correctivas si es necesario.
+
+**Situación de análisis:**
+Has recopilado tus últimas 10 interacciones significativas con IA donde trabajaste en proyectos profesionales importantes. Ahora necesitas evaluar objetivamente si estás usando IA como amplificador de tu pensamiento o como sustituto del mismo.
+
+**Marco de evaluación:**
+- **Nivel 1 - Amplificador:** IA expande ideas que ya tienes desarrolladas
+- **Nivel 2 - Asistente:** IA ayuda a desarrollar conceptos que inicias
+- **Nivel 3 - Generador:** IA crea ideas que luego adaptas/modificas
+- **Nivel 4 - Sustituto:** IA piensa y genera mientras tú solo diriges
+
+**Tu tarea:**
+1. Analizar cada interacción según estos niveles
+2. Identificar patrones de dependencia
+3. Detectar oportunidades perdidas de desarrollo intelectual
+4. Crear plan de corrección hacia uso amplificador
+
+### ✅ Criterios de Éxito
+1. Evalúa honestamente el nivel de cada interacción
+2. Identifica patrones específicos de uso problemático
+3. Reconoce al menos 3 oportunidades perdidas de crecimiento intelectual
+4. Diseña estrategias concretas para migrar hacia uso amplificador
+5. Establece métricas para monitorear progreso
+6. Comparte insights clave (sin detalles personales) en discusión grupal
+
+### 🎓 Objetivo de Aprendizaje
+- Desarrollar autoconciencia sobre patrones de uso de IA
+- Identificar riesgos de dependencia cognitiva
+- Crear estrategias proactivas de preservación intelectual
+
+---
+
+## Ejercicio 4.3: Proyecto de Thought Leadership
+
+**⏰ Tiempo:** 50 minutos  
+**👥 Modalidad:** Individual con presentación final  
+**🛠️ Herramientas:** Ecosistema completo (IA + investigación + TTS/STT)
+
+### 📋 Enunciado del Caso
+
+**Situación estratégica:** Tu carrera profesional ha llegado a un punto donde necesitas establecerte como referente en tu área. Has decidido escribir un artículo de thought leadership que posicione tu expertise y abra nuevas oportunidades profesionales.
+
+**Especificaciones del proyecto:**
+- **Objetivo:** Artículo LinkedIn de 2,000-2,500 palabras
+- **Tema:** "[Tu especialidad] en el contexto post-IA: Retos y oportunidades"
+- **Audiencia:** Profesionales senior de tu sector + posibles empleadores/clientes
+- **Diferenciador:** Debe reflejar tu experiencia única y perspectiva personal
+- **Plazo:** Hoy (para aprovechar momentum del aprendizaje)
+
+**Restricciones importantes:**
+- No puede ser contenido genérico que cualquiera podría escribir
+- Debe incluir al menos 2 casos/ejemplos de tu experiencia directa
+- Tiene que posicionarte como alguien que entiende profundamente tanto el área técnica como las implicaciones estratégicas
+- El artículo debe ser reconociblemente tuyo en voz y perspectiva
+
+**Metodología obligatoria:**
+Aplicar C.R.E.A completa + técnicas dividir y vencer + herramientas TTS/STT según necesidad.
+
+### ✅ Criterios de Éxito
+1. **Investigación:** Compila fuentes actuales y relevantes sobre IA en tu sector
+2. **Originalidad:** Desarrolla al menos 3 perspectivas únicas desde tu experiencia
+3. **Estructura:** Organiza argumentos de manera persuasiva y lógica
+4. **Amplificación:** Expande con IA sin perder tu voz original
+5. **Calidad:** Produce contenido directamente publicable en LinkedIn
+6. **Diferenciación:** El artículo es reconociblemente tuyo vs. contenido genérico de IA
+7. **Presentación:** Presenta los insights principales en 4 minutos al grupo
+
+### 🎓 Objetivo de Aprendizaje
+- Integrar todas las metodologías aprendidas en proyecto real
+- Crear contenido de thought leadership genuino
+- Establecer capacidades de posicionamiento profesional con IA
+- Demostrar dominio completo del ecosistema de productividad
+
+---
+
+## 📊 Evaluación y Seguimiento
+
+### Criterios Generales de Evaluación
+
+**🎯 Competencia Técnica (40%)**
+- Aplicación correcta de frameworks (OSAC, C.R.E.A)
+- Uso efectivo de herramientas complementarias
+- Gestión adecuada de limitaciones técnicas
+
+**💡 Originalidad y Pensamiento Crítico (35%)**
+- Desarrollo de perspectivas únicas
+- Preservación de autoría intelectual
+- Resistencia a la dependencia cognitiva
+
+**🚀 Aplicabilidad Profesional (25%)**
+- Relevancia para contexto de trabajo real
+- Escalabilidad de soluciones desarrolladas
+- Potencial de impacto en productividad
+
+### 📈 Métricas de Progreso
+
+**Nivel Inicial:** Usuario amateur con curiosidad
+**Nivel Objetivo:** Profesional amplificado por IA
+
+**Indicadores de éxito:**
+- Reducción 40%+ en tiempo para tareas complejas
+- Incremento significativo en calidad de deliverables
+- Capacidad de mantener autoría intelectual
+- Confianza para abordar proyectos más ambiciosos
+- Desarrollo de metodologías personales replicables
+
+---
+
+## 🔄 Tareas de Implementación Post-Clase
+
+### Semana 1: Consolidación
+- Implementar toolkit personal OSAC en 3 tareas reales
+- Configurar ecosistema TTS+STT para uso diario
+- Documentar tiempo ahorrado y calidad mejorada
+
+### Semana 2: Experimentación
+- Aplicar "Dividir y Vencer" en un proyecto largo postergado
+- Practicar C.R.E.A en tema de expertise personal
+- Crear primer contenido de thought leadership
+
+### Semana 3: Optimización
+- Refinar metodologías basándose en resultados
+- Entrenar a un colega en framework OSAC
+- Evaluar ROI personal de implementación IA
+
+### Semana 4: Escalamiento
+- Proponer implementación departamental
+- Crear recursos para multiplicar conocimiento
+- Planificar próximos pasos de desarrollo profesional
+
+---
+
+
+
+
+
+
+
+
+
+
+
+                    
+</div>
+                
+                <!-- Contenido renderizado -->
+                <div class="markdown-content" id="rendered-content">
+                    <!-- El contenido se renderiza aquí automáticamente -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Librerías necesarias -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
+
+    <script>
+        // Configuración de marked
+        marked.setOptions({
+            breaks: true,
+            gfm: true,
+            highlight: function(code, lang) {
+                return code; // Aquí podrías agregar syntax highlighting
+            }
+        });
+
+        // Función para crear un slug a partir del texto
+        function createSlug(text) {
+            return text
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/[\s_-]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        // Función para generar la navegación automáticamente
+        function generateNavigation(html) {
+            const nav = document.getElementById('nav-content');
+            nav.innerHTML = '';
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            const headings = tempDiv.querySelectorAll('h1, h2, h3, h4');
+            let currentSection = null;
+            
+            headings.forEach((heading, index) => {
+                const level = parseInt(heading.tagName.charAt(1));
+                const text = heading.textContent;
+                const slug = createSlug(text);
+                
+                // Agregar ID al heading
+                heading.id = slug;
+                
+                // Crear enlace de navegación
+                const link = document.createElement('a');
+                link.href = '#' + slug;
+                link.textContent = text;
+                link.className = 'nav-link';
+                
+                // Aplicar clases según el nivel
+                if (level === 1) {
+                    // Crear nueva sección
+                    const section = document.createElement('div');
+                    section.className = 'nav-section';
+                    
+                    const title = document.createElement('div');
+                    title.className = 'nav-title';
+                    title.textContent = text;
+                    section.appendChild(title);
+                    
+                    nav.appendChild(section);
+                    currentSection = section;
+                } else if (level === 2) {
+                    if (currentSection) {
+                        currentSection.appendChild(link);
+                    } else {
+                        nav.appendChild(link);
+                    }
+                } else if (level === 3) {
+                    link.className += ' sub-item';
+                    if (currentSection) {
+                        currentSection.appendChild(link);
+                    } else {
+                        nav.appendChild(link);
+                    }
+                } else if (level === 4) {
+                    link.className += ' sub-sub-item';
+                    if (currentSection) {
+                        currentSection.appendChild(link);
+                    } else {
+                        nav.appendChild(link);
+                    }
+                }
+            });
+            
+            return tempDiv.innerHTML;
+        }
+
+        // Función para procesar alertas personalizadas
+        function processCustomAlerts(html) {
+            // Convertir blockquotes con patrones específicos en alertas
+            html = html.replace(/<blockquote>\s*<p><strong>Nota:<\/strong>(.*?)<\/p>\s*<\/blockquote>/g, 
+                '<div class="alert alert-info"><strong>Nota:</strong>$1</div>');
+            
+            html = html.replace(/<blockquote>\s*<p><strong>Tip:<\/strong>(.*?)<\/p>\s*<\/blockquote>/g, 
+                '<div class="alert alert-tip"><strong>Tip:</strong>$1</div>');
+            
+            html = html.replace(/<blockquote>\s*<p><strong>Importante:<\/strong>(.*?)<\/p>\s*<\/blockquote>/g, 
+                '<div class="alert alert-warning"><strong>Importante:</strong>$1</div>');
+            
+            html = html.replace(/<blockquote>\s*<p><strong>Peligro:<\/strong>(.*?)<\/p>\s*<\/blockquote>/g, 
+                '<div class="alert alert-danger"><strong>Peligro:</strong>$1</div>');
+            
+            return html;
+        }
+
+        // Función principal para renderizar markdown
+        function renderMarkdown() {
+            const markdownSource = document.getElementById('markdown-source').innerHTML;
+
+            const renderedContent = document.getElementById('rendered-content');
+            
+            // Convertir markdown a HTML
+            let html = marked.parse(markdownSource);
+            
+            // Procesar alertas personalizadas
+            html = processCustomAlerts(html);
+            
+            // Generar navegación y actualizar IDs
+            html = generateNavigation(html);
+            
+            /* JavaScript - dentro de renderMarkdown() */
+html = html.replace(/<pre><code class="language-mermaid">([\s\S]*?)<\/code><\/pre>/g, (_, code) => {
+    const decoded = code
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&amp;/g, '&');
+    return `<div class="mermaid">${decoded}</div>`;
+});
+
+            // Sanitizar HTML
+            html = DOMPurify.sanitize(html, {
+  ADD_TAGS: ['iframe'],
+  ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling', 'src', 'title', 'width', 'height']
+});
+            
+            // Insertar en el DOM
+            renderedContent.innerHTML = html;
+            
+            // Configurar navegación
+            setupNavigation();
+        }
+
+        // Función para configurar la navegación
+        function setupNavigation() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                    
+                    // Cerrar sidebar en móvil
+                    if (window.innerWidth <= 768) {
+                        document.getElementById('sidebar').classList.remove('open');
+                    }
+                });
+            });
+        }
+
+        // Función para actualizar navegación activa
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.pageYOffset >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Función para alternar sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMarkdown();
+            
+            // Configurar scroll spy
+            window.addEventListener('scroll', updateActiveNav);
+            window.addEventListener('load', updateActiveNav);
+            
+            // Cerrar sidebar al hacer clic fuera
+            document.addEventListener('click', function(event) {
+                const sidebar = document.getElementById('sidebar');
+                const menuBtn = document.querySelector('.mobile-menu-btn');
+                
+                if (window.innerWidth <= 768 && 
+                    !sidebar.contains(event.target) && 
+                    !menuBtn.contains(event.target) && 
+                    sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

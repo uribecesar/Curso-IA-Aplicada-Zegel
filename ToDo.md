@@ -1,24 +1,27 @@
 # ✅ Proyecto: Curso de IA Aplicada — Producción Modular
 
 ## 🌱 Etapa 1: Rediseño de contenido (por clase)
-- [ ] Rediseñar objetivos y estructura de la clase 1
-- [ ] Rediseñar objetivos y estructura de la clase 2
-- [ ] Rediseñar objetivos y estructura de la clase 3
-- [ ] Rediseñar objetivos y estructura de la clase 4
-- [ ] Rediseñar objetivos y estructura de la clase 5
-- [ ] Rediseñar objetivos y estructura de la clase 6
-- [ ] Rediseñar objetivos y estructura de la clase 7
-- [ ] Rediseñar objetivos y estructura de la clase 8
+- [X] Rediseñar objetivos y estructura de la clase 1
+- [X] Rediseñar objetivos y estructura de la clase 2
+- [X] Rediseñar objetivos y estructura de la clase 3
+- [X] Rediseñar objetivos y estructura de la clase 4
+- [X] Rediseñar objetivos y estructura de la clase 5
+- [X] Rediseñar objetivos y estructura de la clase 6
+- [X] Rediseñar objetivos y estructura de la clase 7
+- [X] Rediseñar objetivos y estructura de la clase 8
 
 ## 🤖 Etapa 2: Pulido con IA
-- [ ] Refinar clase 1 con IA
-- [ ] Refinar clase 2 con IA
-- [ ] Refinar clase 3 con IA
-- [ ] Refinar clase 4 con IA
-- [ ] Refinar clase 5 con IA
-- [ ] Refinar clase 6 con IA
-- [ ] Refinar clase 7 con IA
-- [ ] Refinar clase 8 con IA
+- [X] Refinar clase 1 con IA
+- [X] Refinar clase 2 con IA
+- [X] Refinar clase 3 con IA
+- [X] Refinar clase 4 con IA
+- [X] Refinar clase 5 con IA
+- [X] Refinar clase 6 con IA
+- [X] Refinar clase 7 con IA
+- [X] Refinar clase 8 con IA
+
+Falta Curara todas las diaspotivas añadir la de presntacion
+añdir añadir el video desarrollo de conectar una hoja de calculo
 
 ## 🎬 Etapa 3: Escaletas y documentación HTML
 - [ ] Generar escaleta clase 1

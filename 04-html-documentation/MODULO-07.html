@@ -341,340 +341,406 @@
 
 
 
+
 # 📋 Ficha de Ejercicios y Actividades
-## Segunda Sesión: Analítica Aumentada y Generación de Reportes
+##  Septima Sesión:  Desarrollo de Agentes y Automatización
 **Docente:** Ing. Cesar Uribe | [LinkedIn](https://www.linkedin.com/in/uribealvites/)  
 **Web:** [https://lab.zildar.com](https://lab.zildar.com)
 
 ---
 
-## 🎯 EJERCICIO 1: DIAGRAMAS PROFESIONALES CON MERMAID
+## 📋 ÍNDICE DE EJERCICIOS
 
-### **INFORMACIÓN GENERAL**
-- **Módulo:** ChatGPT + Mermaid
-- **Duración:** 15 minutos
-- **Nivel:** Básico-Intermedio
-- **Modalidad:** Individual
-
-### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Aplicar framework OSAC para crear prompts efectivos
-- Generar diagramas profesionales usando IA + Mermaid
-- Crear visualizaciones que reemplacen métodos manuales en su trabajo
-
-### **CASO/ENUNCIADO**
-**Contexto:** Eres consultor de procesos en una empresa mediana. El gerente general te solicita documentar procesos críticos para una auditoría ISO próxima semana.
-
-**Tu rol:** Consultor de procesos / Analista organizacional
-
-**Problema a resolver:** 
-Necesitas crear un diagrama de flujo profesional para un proceso que realizas frecuentemente en tu trabajo actual (mínimo 3 veces por semana). Este diagrama será usado para:
-- Capacitación de nuevo personal
-- Documentación de procedimientos
-- Identificación de mejoras de eficiencia
-
-**Restricciones:**
-- Máximo 8 pasos en el proceso (para claridad visual)
-- Debe incluir al menos 2 puntos de decisión
-- Formato requerido: flowchart TD (top-down)
-- Presentación ejecutiva (audiencia: directivos)
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-3:** Identificar proceso real de tu trabajo
-2. **Minutos 4-6:** Construir prompt usando framework OSAC
-3. **Minutos 7-12:** Generar código Mermaid con ChatGPT
-4. **Minutos 13-14:** Renderizar en mermaid.live
-5. **Minuto 15:** Exportar PNG y preparar para compartir
-
-### **ENTREGABLES**
-- **Primario:** Archivo PNG del diagrama funcional
-- **Secundario:** Código Mermaid generado
-- **Presentación:** 1 minuto explicando cómo usarás este diagrama
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Aplicabilidad** | Proceso real y útil | Proceso real | Proceso genérico | Proceso irrelevante |
-| **Claridad visual** | Muy fácil seguir | Fácil seguir | Comprensible | Confuso |
-| **Completitud** | Incluye decisiones y excepciones | Incluye decisiones | Flujo básico | Incompleto |
-| **Profesionalismo** | Presentable a directivos | Presentable a equipo | Uso interno | No presentable |
-
-### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT (gratuito), mermaid.live
-- **Navegador:** Chrome, Firefox o Safari actualizado
-- **Conocimiento previo:** Ninguno específico
-
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B técnico:** Si mermaid.live falla, usar diagrams.net
-- **Para avanzados:** Añadir swimlanes o subprocesos
-- **Para principiantes:** Proveer ejemplo de proceso (ej: "proceso de compra online")
+| # | Ejercicio | Categoría | Nivel | Tiempo |
+|---|-----------|-----------|-------|--------|
+| 1 | Análisis de Procesos Automatizables | Diagnóstico | Básico | 20 min |
+| 2 | Evaluación ROI de Automatización | Análisis | Básico | 25 min |
+| 3 | Organizador de Archivos Universal | Documentos | Intermedio | 30 min |
+| 4 | Extractor de Datos Empresariales | Documentos | Intermedio | 35 min |
+| 5 | Configuración Workspace Empresarial | Entorno | Básico | 20 min |
+| 6 | Aplicación de Captura de Datos | Aplicaciones | Avanzado | 40 min |
+| 7 | Sistema de Reportes Integrados | Aplicaciones | Avanzado | 35 min |
+| 8 | Proyecto de Automatización Completa | Agentes | Experto | 45 min |
 
 ---
 
-## 📊 EJERCICIO 2: ANÁLISIS INTELIGENTE DE DATOS PERSONALES
+## 📊 EJERCICIO 1: ANÁLISIS DE PROCESOS AUTOMATIZABLES
 
-### **INFORMACIÓN GENERAL**
-- **Módulo:** IA como Analista 24/7
-- **Duración:** 15 minutos
-- **Nivel:** Básico
-- **Modalidad:** Individual
+### 🎯 Objetivo de Aprendizaje
+Identificar y priorizar procesos empresariales con mayor potencial de automatización usando criterios objetivos.
 
-### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Estructurar datos en formato CSV optimizado para IA
-- Generar análisis estadístico completo mediante conversación natural
-- Identificar insights accionables en datos cotidianos
+### 🏢 Contexto Empresarial
+Una empresa de consultoría financiera con 25 empleados procesa mensualmente: 150 reportes de clientes, 300 facturas, 80 propuestas comerciales, y gestiona 200 leads nuevos. El director general busca optimizar operaciones.
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el CFO de tu vida personal. Necesitas presentar un "reporte financiero personal" a tu "junta directiva familiar" para justificar decisiones de gasto del próximo trimestre.
+### 📋 Enunciado del Caso
+**Situación:** Eres el responsable de transformación digital. Debes analizar los procesos actuales y recomendar cuáles automatizar primero.
 
-**Tu rol:** Analista financiero personal
+**Datos del problema:**
+- Generación de reportes: 4 horas por reporte
+- Procesamiento de facturas: 15 minutos por factura
+- Elaboración de propuestas: 2.5 horas por propuesta
+- Gestión de leads: 20 minutos por lead
+- Costo promedio: $45 USD/hora
 
-**Problema a resolver:**
-Analizar tus gastos personales de los últimos 6 meses para:
-- Identificar patrones de gasto no evidentes
-- Encontrar oportunidades de optimización
-- Descubrir un insight sorprendente sobre tus hábitos
-- Proponer 2 decisiones financieras basadas en datos
+### 📝 Entregables Esperados
+1. Matriz de priorización (impacto vs complejidad)
+2. Cálculo de ROI potencial por proceso
+3. Recomendación de secuencia de implementación
+4. Justificación técnica de las decisiones
 
-**Datos a utilizar:**
-- **50 transacciones** (mínimo) de los últimos 6 meses
-- **Columnas requeridas:** Fecha, Categoría, Monto, Descripción, Método de pago
-- **Categorías sugeridas:** Alimentación, Transporte, Entretenimiento, Servicios, Compras, Salud
-
-**Restricciones:**
-- Solo datos reales (puede ser aproximado si no tienes registro exacto)
-- Formato CSV válido
-- Análisis debe generar mínimo 1 gráfico
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Crear CSV en Google Sheets con tus datos reales
-2. **Minutos 6-8:** Subir a ChatGPT y aplicar prompt de análisis exploratorio
-3. **Minutos 9-12:** Solicitar gráficos y profundizar en un patrón interesante
-4. **Minutos 13-15:** Identificar y preparar insight sorprendente para compartir
-
-### **ENTREGABLES**
-- **Primario:** Un insight sorprendente sobre tus hábitos de gasto
-- **Secundario:** CSV estructurado con tus datos
-- **Presentación:** 1 minuto compartiendo el descubrimiento más interesante
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Calidad datos** | 50+ registros, 6 columnas completas | 30+ registros, datos completos | 20+ registros, básico | <20 registros |
-| **Insight generado** | Sorprendente y accionable | Interesante y útil | Básico pero válido | Obvio o irrelevante |
-| **Uso de IA** | Múltiples consultas profundas | Varias consultas | Consulta básica | Solo carga datos |
-| **Aplicabilidad** | Cambiará comportamiento real | Información valiosa | Conocimiento general | Sin utilidad práctica |
-
-### **RECURSOS NECESARIOS**
-- **Herramientas:** Google Sheets, ChatGPT (gratuito o Plus)
-- **Datos:** Extractos bancarios o registros personales
-- **Tiempo:** Acceso a información financiera personal
-
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B:** Proporcionar dataset de ejemplo si estudiante no tiene datos
-- **Para avanzados:** Incluir análisis predictivo y presupuesto futuro
-- **Para principiantes:** Proveer plantilla CSV con categorías predefinidas
-- **Alternativa:** Usar datos de gastos laborales en lugar de personales
+### ⏱️ Tiempo Estimado: 20 minutos
+### 📊 Nivel: Básico
+### 🛠️ Recursos: Calculadora, hoja de análisis
 
 ---
 
-## 🌐 EJERCICIO 3: DASHBOARD WEB INTERACTIVO
+## 💰 EJERCICIO 2: EVALUACIÓN ROI DE AUTOMATIZACIÓN
 
-### **INFORMACIÓN GENERAL**
-- **Módulo:** Dashboards HTML Profesionales
-- **Duración:** 25 minutos
-- **Nivel:** Intermedio
-- **Modalidad:** Individual
+### 🎯 Objetivo de Aprendizaje
+Calcular retorno de inversión cuantificable para justificar proyectos de automatización ante directivos.
 
-### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Crear dashboards web funcionales sin programación
-- Implementar visualizaciones interactivas con filtros
-- Desplegar soluciones web usando Google Sites
+### 🏢 Contexto Empresarial
+Un despacho legal especializado en derecho corporativo maneja 120 casos activos. Cada caso requiere clasificación de documentos, extracción de fechas críticas, y generación de resúmenes ejecutivos.
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el gerente de ventas de una empresa retail. El director general necesita un dashboard interactivo para la junta directiva del lunes, que permita a los miembros explorar los datos de ventas trimestrales de forma autónoma durante la presentación.
+### 📋 Enunciado del Caso
+**Situación:** El socio principal quiere automatizar la gestión documental pero necesita justificación económica sólida antes de invertir.
 
-**Tu rol:** Gerente de ventas / Analista de business intelligence
+**Datos actuales:**
+- Tiempo clasificación: 45 minutos por caso
+- Paralegal junior: $35 USD/hora
+- Errores de clasificación: 12% requieren reproceso
+- Casos nuevos: 25 por mes
+- Tiempo reproceso: 30 minutos adicionales
 
-**Problema a resolver:**
-Crear un dashboard web profesional que permita:
-- Visualizar performance de ventas por mes, producto y región
-- Filtrar datos interactivamente durante la presentación
-- Identificar top performers y productos problema
-- Ser accesible vía URL para revisión previa de directivos
+**Costos de implementación:**
+- Desarrollo inicial: 40 horas a $75 USD/hora
+- Capacitación: 8 horas a $45 USD/hora
+- Mantenimiento mensual: $200 USD
 
-**Datos proporcionados:**
-- **30 registros de ventas** del último trimestre
-- **Columnas:** Fecha, Producto, Categoría, Cantidad, Precio, Vendedor, Región
-- **Formato:** CSV limpio y estructurado
+### 📝 Entregables Esperados
+1. Cálculo de costos actuales mensuales/anuales
+2. Proyección de ahorros con automatización
+3. Análisis de punto de equilibrio
+4. Recomendación de viabilidad del proyecto
 
-**Especificaciones técnicas:**
-- Responsive (funcional en tablets de directivos)
-- Mínimo 4 visualizaciones diferentes
-- Filtros por fecha y región
-- Panel de KPIs destacado
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Preparar y revisar CSV proporcionado
-2. **Minutos 6-15:** Generar dashboard HTML con prompts optimizados
-3. **Minutos 16-20:** Personalizar diseño y añadir filtros
-4. **Minutos 21-25:** Subir a Google Sites y obtener URL funcional
-
-### **ENTREGABLES**
-- **Primario:** URL funcional del dashboard en Google Sites
-- **Secundario:** Código HTML generado
-- **Demostración:** 2 minutos mostrando funcionalidades clave
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Funcionalidad** | Todo funciona perfectamente | Funciona con errores menores | Funciona básicamente | Errores críticos |
-| **Diseño profesional** | Presentable a C-level | Presentable a gerencia | Uso interno | No profesional |
-| **Interactividad** | Filtros + hover + responsive | Filtros + responsive | Solo filtros básicos | Sin interactividad |
-| **Deployment** | URL accesible y rápida | URL accesible | URL con problemas | No desplegado |
-
-### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT/Claude, Google Sites, navegador moderno
-- **Dataset:** Proporcionado por instructor
-- **Cuenta:** Google account para Sites
-- **Conocimiento previo:** Uso básico de navegador web
-
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B técnico:** Si Google Sites falla, usar CodePen o JSFiddle
-- **Para avanzados:** Añadir exportación PDF y modo presentación
-- **Para principiantes:** Proporcionar código base parcial para completar
-- **Dataset alternativo:** Datos de marketing digital o recursos humanos
+### ⏱️ Tiempo Estimado: 25 minutos
+### 📊 Nivel: Básico
+### 🛠️ Recursos: Hoja de cálculo
 
 ---
 
-## 🧠 EJERCICIO 4: DECISIÓN ESTRATÉGICA CON IA
+## 🗂️ EJERCICIO 3: ORGANIZADOR DE ARCHIVOS UNIVERSAL
 
-### **INFORMACIÓN GENERAL**
-- **Módulo:** Decisiones Estratégicas con IA
-- **Duración:** 30 minutos
-- **Nivel:** Avanzado
-- **Modalidad:** Individual
+### 🎯 Objetivo de Aprendizaje
+Diseñar sistema automatizado para organización inteligente de archivos empresariales.
 
-### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Aplicar metodología de decisión estratégica asistida por IA
-- Validar recomendaciones mediante múltiples perspectivas
-- Generar plan de implementación con métricas de seguimiento
+### 🏢 Contexto Empresarial
+Una agencia de marketing digital acumula 500+ archivos semanales (imágenes, videos, documentos, presentaciones) sin estructura. Los diseñadores pierden 45 minutos diarios buscando archivos.
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el CEO de "RetailMax", una cadena de tiendas de ropa con 15 años en el mercado. La empresa ha crecido consistentemente, pero los últimos 6 meses muestran estancamiento en ventas mientras el e-commerce nacional crece 40% anual.
+### 📋 Enunciado del Caso
+**Situación:** Eres el responsable de sistemas. Debes crear un organizador automático que clasifique archivos por proyecto, tipo, fecha y cliente.
 
-**Tu rol:** CEO / Director General
+**Desafíos específicos:**
+- Múltiples formatos: JPG, PNG, MP4, PDF, PSD, AI, DOCX
+- Nombres inconsistentes: "final_v2", "ultimo_cliente_modificado"
+- Duplicados frecuentes
+- Estructura actual: una carpeta con todo mezclado
+- 8 proyectos activos simultáneos
 
-**Situación crítica:**
-El consejo directivo aprobó presupuesto de $500,000 para crecimiento Q4. Tienes dos opciones mutuamente excluyentes:
+**Requerimientos:**
+- Clasificación automática por tipo de archivo
+- Organización por cliente y proyecto
+- Detección y eliminación de duplicados
+- Backup automático de archivos importantes
+- Log de todas las operaciones realizadas
 
-**OPCIÓN A:** Abrir 3 nuevas tiendas físicas en ciudades secundarias
-- Costo: $480,000 (fit-out + inventario inicial)
-- Timeline: 4 meses implementación
-- ROI proyectado tradicional: 18-24 meses
+### 📝 Entregables Esperados
+1. Estructura de carpetas propuesta
+2. Lógica de clasificación automatizada
+3. Reglas para manejo de duplicados
+4. Sistema de nomenclatura estandarizada
+5. Procedimiento de backup
 
-**OPCIÓN B:** Inversión total en plataforma e-commerce avanzada
-- Costo: $450,000 (plataforma + marketing + logística)
-- Timeline: 2 meses implementación
-- ROI proyectado: 8-12 meses
-
-**Complejidad:** Los datos históricos muestran patrones contradictorios y tu equipo está dividido 50/50.
-
-**Datos disponibles:**
-- 5 años de ventas por tienda (15,000 registros)
-- Performance e-commerce actual (limitado)
-- Datos demográficos mercados objetivo
-- Análisis competencia local y online
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Cargar datos en visor dinámico IA
-2. **Minutos 6-10:** Generar reporte PDF ejecutivo
-3. **Minutos 11-20:** Análisis consultor IA + validación múltiples perspectivas
-4. **Minutos 21-25:** Aplicar "abogado del diablo" para desafiar recomendación
-5. **Minutos 26-30:** Decisión final documentada con plan de seguimiento
-
-### **ENTREGABLES**
-- **Primario:** Decisión justificada (Opción A o B) con 3 argumentos sólidos
-- **Secundario:** Plan de implementación con métricas de seguimiento
-- **Presentación:** 3 minutos defendiendo decisión ante "consejo directivo"
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Uso metodología IA** | 3 fases completas + validación | 3 fases completas | 2 fases + básico | Solo 1 fase |
-| **Calidad argumentación** | Datos + lógica + riesgos | Datos + lógica | Solo datos | Opinión personal |
-| **Viabilidad decisión** | Implementable y medible | Implementable | Conceptualmente válida | No factible |
-| **Defensa ejecutiva** | Convincente para CEO | Convincente para gerencia | Argumento básico | Poco convincente |
-
-### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT Plus o Claude Pro (recomendado)
-- **Dataset:** Proporcionado por instructor (retail_5años.csv)
-- **Tiempo:** Acceso completo a herramientas IA durante ejercicio
-- **Mindset:** Pensamiento estratégico y apertura al cambio
-
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B:** Si dataset grande falla, usar muestra representativa
-- **Para avanzados:** Incluir análisis financiero detallado (NPV, IRR)
-- **Para principiantes:** Proporcionar framework de decisión más estructurado
-- **Industrias alternativas:** Adaptar a SaaS, manufacturing, o servicios
-
-### **ESCENARIOS DE EXTENSIÓN**
-- **Tiempo extra:** Desarrollar plan de contingencia para opción no elegida
-- **Trabajo grupal:** Dividir clase en "equipos consultores" que presenten a CEO
-- **Seguimiento:** En próxima clase, revisar métricas de decisiones tomadas
+### ⏱️ Tiempo Estimado: 30 minutos
+### 📊 Nivel: Intermedio
+### 🛠️ Recursos: Thonny IDE, carpeta de archivos de prueba
 
 ---
 
-## 🎯 RÚBRICA GENERAL DEL MÓDULO
+## 📊 EJERCICIO 4: EXTRACTOR DE DATOS EMPRESARIALES
 
-### **EVALUACIÓN INTEGRAL**
-| Competencia | Peso | Excelente (90-100) | Bueno (80-89) | Suficiente (70-79) | Insuficiente (<70) |
-|-------------|------|-------------------|---------------|-------------------|-------------------|
-| **Dominio técnico IA** | 30% | Usa IA de forma experta | Usa IA efectivamente | Usa IA básicamente | Dificultades técnicas |
-| **Pensamiento analítico** | 25% | Insights profundos | Insights válidos | Análisis básico | Análisis superficial |
-| **Aplicabilidad práctica** | 25% | Soluciones implementables | Soluciones útiles | Soluciones teóricas | Soluciones irrelevantes |
-| **Comunicación resultados** | 20% | Presentación ejecutiva | Presentación clara | Presentación básica | Presentación confusa |
+### 🎯 Objetivo de Aprendizaje
+Desarrollar sistema de extracción automática de información crítica desde documentos no estructurados.
 
-### **INDICADORES DE ÉXITO GENERAL**
-- **Técnico:** 4/4 ejercicios completados funcionalmente
-- **Conceptual:** Demuestra comprensión del valor estratégico de IA
-- **Práctico:** Identifica mínimo 2 aplicaciones reales en su trabajo
-- **Actitudinal:** Muestra confianza para implementar soluciones IA
+### 🏢 Contexto Empresarial
+Una distribuidora farmacéutica recibe 80 facturas semanales en PDF de 15 proveedores diferentes. Cada factura requiere extracción manual de: fecha, proveedor, productos, cantidades, precios, y términos de pago.
 
----
+### 📋 Enunciado del Caso
+**Situación:** El contador senior dedica 6 horas semanales a esta tarea. Los errores de transcripción causan problemas con inventarios y cuentas por pagar.
 
-## 📋 RECURSOS COMPLEMENTARIOS
+**Complejidad del problema:**
+- Formatos de factura diferentes por proveedor
+- Información ubicada en posiciones variables
+- Algunos PDFs son imágenes escaneadas
+- Productos con códigos internos diferentes
+- Fechas en múltiples formatos (DD/MM/YYYY, MM-DD-YY, etc.)
 
-### **HERRAMIENTAS REQUERIDAS**
-- **ChatGPT:** Cuenta gratuita mínimo, Plus recomendado
-- **Navegador:** Chrome, Firefox o Safari (última versión)
-- **Google Account:** Para Google Sheets y Sites
-- **Editor texto:** Notepad++, VS Code, o similar (opcional)
+**Datos críticos a extraer:**
+- Número de factura
+- Fecha de emisión y vencimiento
+- Nombre y código del proveedor
+- Lista de productos con códigos
+- Cantidades y precios unitarios
+- Subtotal, impuestos, total
+- Términos de pago
 
-### **DATASETS PROPORCIONADOS**
-- `gastos_ejemplo.csv` - Para ejercicio 2 (backup)
-- `ventas_retail.csv` - Para ejercicio 3 (30 registros)
-- `retail_estrategico.csv` - Para ejercicio 4 (15,000 registros)
+### 📝 Entregables Esperados
+1. Sistema de identificación de campos clave
+2. Métodos de validación de datos extraídos
+3. Formato de salida estandarizado (Excel/CSV)
+4. Manejo de errores y excepciones
+5. Reporte de calidad de extracción
 
-### **LINKS DE REFERENCIA**
-- **Mermaid Live:** https://mermaid.live/
-- **Google Sites:** https://sites.google.com/
-- **ChatGPT:** https://chat.openai.com/
-- **Claude:** https://claude.ai/
-
-### **CONTINGENCIAS TÉCNICAS**
-- **Internet lento:** Datasets locales pre-cargados
-- **Herramientas caídas:** Alternativas para cada ejercicio
-- **Dispositivos limitados:** Ejercicios adaptables a móvil
+### ⏱️ Tiempo Estimado: 35 minutos
+### 📊 Nivel: Intermedio
+### 🛠️ Recursos: PDFs de ejemplo, librerías Python
 
 ---
 
+## ⚙️ EJERCICIO 5: CONFIGURACIÓN WORKSPACE EMPRESARIAL
+
+### 🎯 Objetivo de Aprendizaje
+Establecer entorno de desarrollo optimizado para automatización empresarial sostenible.
+
+### 🏢 Contexto Empresarial
+Una startup fintech con 12 empleados quiere implementar automatización gradual. Necesitan entorno estándar que permita a cualquier empleado crear y mantener scripts de automatización.
+
+### 📋 Enunciado del Caso
+**Situación:** Como líder técnico, debes diseñar un workspace que facilite adopción masiva de automatización por empleados no técnicos.
+
+**Requerimientos organizacionales:**
+- Empleados con niveles técnicos variados
+- Procesos que cambian frecuentemente
+- Necesidad de colaboración en scripts
+- Cumplimiento de estándares de seguridad
+- Escalabilidad para crecimiento futuro
+
+**Procesos típicos a automatizar:**
+- Onboarding de clientes (KYC)
+- Reportes regulatorios
+- Análisis de riesgo crediticio
+- Conciliación de transacciones
+- Comunicación con clientes
+
+### 📝 Entregables Esperados
+1. Estructura de directorios empresarial
+2. Estándares de nomenclatura
+3. Templates de prompts por área
+4. Sistema de versionado simple
+5. Guías de mejores prácticas
+6. Configuración de seguridad básica
+
+### ⏱️ Tiempo Estimado: 20 minutos
+### 📊 Nivel: Básico
+### 🛠️ Recursos: Thonny IDE, documentación empresarial
+
+---
+
+## 🖥️ EJERCICIO 6: APLICACIÓN DE CAPTURA DE DATOS
+
+### 🎯 Objetivo de Aprendizaje
+Crear aplicación de escritorio profesional que reemplace procesos manuales de Excel.
+
+### 🏢 Contexto Empresarial
+Una clínica veterinaria registra manualmente 40 pacientes diarios en Excel. El proceso incluye datos del animal, propietario, síntomas, tratamiento, y seguimiento. Los errores de captura causan problemas en historiales médicos.
+
+### 📋 Enunciado del Caso
+**Situación:** La directora médica quiere digitalizar completamente el proceso de registro, con validaciones automáticas y generación de reportes.
+
+**Complejidades específicas:**
+- Información sensible (datos personales + médicos)
+- Campos obligatorios vs opcionales
+- Validación de datos en tiempo real
+- Múltiples usuarios simultáneos
+- Integración con sistema de facturación
+- Alertas para vacunas y controles
+
+**Datos a capturar:**
+- Propietario: nombre, teléfono, email, dirección
+- Mascota: nombre, especie, raza, edad, peso
+- Consulta: fecha, síntomas, diagnóstico, tratamiento
+- Seguimiento: próxima cita, medicación, observaciones
+
+### 📝 Entregables Esperados
+1. Interfaz de usuario intuitiva
+2. Sistema de validación robusto
+3. Almacenamiento estructurado
+4. Función de búsqueda rápida
+5. Generación de reportes básicos
+6. Sistema de backup automático
+
+### ⏱️ Tiempo Estimado: 40 minutos
+### 📊 Nivel: Avanzado
+### 🛠️ Recursos: Tkinter, datos de ejemplo, templates UI
+
+---
+
+## 📈 EJERCICIO 7: SISTEMA DE REPORTES INTEGRADOS
+
+### 🎯 Objetivo de Aprendizaje
+Desarrollar sistema automatizado de reportes ejecutivos con métricas empresariales clave.
+
+### 🏢 Contexto Empresarial
+Una empresa de logística necesita reportes gerenciales diarios que consoliden: entregas realizadas, costos operativos, satisfacción del cliente, y performance de conductores. Actualmente toma 3 horas diarias generar estos reportes manualmente.
+
+### 📋 Enunciado del Caso
+**Situación:** El gerente general requiere reportes automáticos listos cada mañana a las 7:00 AM, con datos del día anterior y tendencias semanales.
+
+**Fuentes de datos:**
+- Sistema de GPS (entregas completadas)
+- Base de datos de costos (combustible, mantenimiento)
+- Encuestas de satisfacción (ratings clientes)
+- Registro de conductores (horas, rutas, incidentes)
+
+**Métricas críticas:**
+- % de entregas a tiempo
+- Costo promedio por entrega
+- Satisfacción del cliente (1-5)
+- Eficiencia por conductor
+- Comparación vs mes anterior
+- Proyección semanal
+
+**Formato requerido:**
+- Dashboard visual con gráficos
+- Resumen ejecutivo (máximo 1 página)
+- Distribución automática vía email
+- Archivo Excel detallado para análisis
+
+### 📝 Entregables Esperados
+1. Dashboard con visualizaciones clave
+2. Sistema de cálculo automatizado de KPIs
+3. Generación de gráficos dinámicos
+4. Resumen ejecutivo automatizado
+5. Programación de envío automático
+6. Alertas para métricas críticas
+
+### ⏱️ Tiempo Estimado: 35 minutos
+### 📊 Nivel: Avanzado
+### 🛠️ Recursos: matplotlib, datos simulados, templates de reportes
+
+---
+
+## 🤖 EJERCICIO 8: PROYECTO DE AUTOMATIZACIÓN COMPLETA
+
+### 🎯 Objetivo de Aprendizaje
+Integrar todos los conocimientos en un proyecto end-to-end que resuelva un desafío empresarial real.
+
+### 🏢 Contexto Empresarial
+Una firma de consultoría estratégica con 35 consultores maneja 60+ proyectos anuales. Cada proyecto genera: propuesta inicial, contratos, reportes de progreso, facturas, y documentación final. El proceso manual actual causa cuellos de botella y errores costosos.
+
+### 📋 Enunciado del Caso
+**Situación:** Como director de operaciones, debes diseñar un ecosistema completo de automatización que transforme la gestión de proyectos de principio a fin.
+
+**Procesos involucrados:**
+1. **Captura de leads** → Formulario con validación
+2. **Generación de propuestas** → Templates personalizados
+3. **Gestión documental** → Organización automática por proyecto
+4. **Seguimiento de hitos** → Alertas y notificaciones
+5. **Facturación** → Cálculos automáticos según avance
+6. **Reportes ejecutivos** → Dashboard con métricas clave
+
+**Desafíos complejos:**
+- 15 tipos diferentes de proyectos
+- Clientes en 8 países (múltiples monedas)
+- Equipos multidisciplinarios
+- Regulaciones específicas por sector
+- Integraciones con CRM y contabilidad existente
+
+**Métricas de éxito:**
+- 70% reducción en tiempo administrativo
+- 95% precisión en facturación
+- 100% trazabilidad de documentos
+- ROI demostrable en 6 meses
+
+### 📝 Entregables Esperados
+1. Arquitectura completa del sistema
+2. Aplicación principal funcionando
+3. Scripts de automatización integrados
+4. Sistema de reportes ejecutivos
+5. Plan de implementación por fases
+6. Documentación de usuario
+7. Métricas de ROI proyectadas
+8. Estrategia de adopción organizacional
+
+### ⏱️ Tiempo Estimado: 45 minutos
+### 📊 Nivel: Experto
+### 🛠️ Recursos: Todos los anteriores + datos empresariales reales
+
+---
+
+### 🔧 Recursos Técnicos Necesarios
+
+**Software requerido:**
+- Thonny IDE instalado
+- Python 3.8+ con librerías: pandas, openpyxl, tkinter
+- Archivos de ejemplo para cada ejercicio
+- Templates de documentos empresariales
+
+**Material de apoyo:**
+- Calculadora de ROI
+- Datasets simulados por sector
+- Templates de UI para Tkinter
+- Casos de estudio reales (anonymizados)
+
+### ⏱️ Gestión del Tiempo
+
+**Distribución sugerida:**
+- 15% Explicación del contexto
+- 60% Desarrollo en vivo
+- 20% Discusión de resultados
+- 5% Conexión con siguientes temas
+
+**Flexibilidad:** Ajustar tiempos según nivel del grupo y complejidad encontrada durante desarrollo.
+
+---
+
+## ✅ CRITERIOS DE EVALUACIÓN
+
+### 📊 Rúbrica por Ejercicio
+
+**Nivel Básico (Ejercicios 1-2, 5):**
+- ✅ Comprende el problema empresarial
+- ✅ Identifica elementos clave
+- ✅ Propone solución viable
+
+**Nivel Intermedio (Ejercicios 3-4):**
+- ✅ Todo lo anterior +
+- ✅ Implementa solución técnica
+- ✅ Maneja errores básicos
+
+**Nivel Avanzado (Ejercicios 6-7):**
+- ✅ Todo lo anterior +
+- ✅ Integra múltiples componentes
+- ✅ Optimiza para uso empresarial
+
+**Nivel Experto (Ejercicio 8):**
+- ✅ Todo lo anterior +
+- ✅ Diseña arquitectura completa
+- ✅ Demuestra visión estratégica
 
 
 
+
+
+
+
+
+
+
+
+
+
+                    
 </div>
                 
                 <!-- Contenido renderizado -->

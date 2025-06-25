@@ -341,340 +341,263 @@
 
 
 
+
 # 📋 Ficha de Ejercicios y Actividades
-## Segunda Sesión: Analítica Aumentada y Generación de Reportes
+## Cuarta Sesión:  Ética, Prompt Engineering Avanzado y Automatización 
 **Docente:** Ing. Cesar Uribe | [LinkedIn](https://www.linkedin.com/in/uribealvites/)  
 **Web:** [https://lab.zildar.com](https://lab.zildar.com)
 
+
 ---
 
-## 🎯 EJERCICIO 1: DIAGRAMAS PROFESIONALES CON MERMAID
-
-### **INFORMACIÓN GENERAL**
-- **Módulo:** ChatGPT + Mermaid
-- **Duración:** 15 minutos
-- **Nivel:** Básico-Intermedio
-- **Modalidad:** Individual
+## 🔧 EJERCICIO 1: AUTOMATIZACIÓN FINANCIERA CON APPS SCRIPT
 
 ### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Aplicar framework OSAC para crear prompts efectivos
-- Generar diagramas profesionales usando IA + Mermaid
-- Crear visualizaciones que reemplacen métodos manuales en su trabajo
+Implementar sistema automatizado de control financiero usando Google Apps Script y prompting avanzado con IA.
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres consultor de procesos en una empresa mediana. El gerente general te solicita documentar procesos críticos para una auditoría ISO próxima semana.
+### **CASO EMPRESARIAL**
+Tu empresa consultora (50 empleados) maneja ingresos/egresos de manera manual:
+- **Problema actual:** Formularios en papel, consolidación manual, errores frecuentes
+- **Tiempo perdido:** 4-6 horas semanales por persona administrativa
+- **Impacto:** Retrasos en reportes, inconsistencias en datos, decisiones tardías
 
-**Tu rol:** Consultor de procesos / Analista organizacional
+### **ESCENARIO ESPECÍFICO**
+- Necesitas capturar: fecha, tipo (ingreso/egreso), categoría, monto, descripción
+- Validaciones requeridas: rangos de fechas, montos positivos, categorías predefinidas
+- Alertas automáticas cuando gastos excedan $500
+- Resumen semanal enviado por email los lunes
 
-**Problema a resolver:** 
-Necesitas crear un diagrama de flujo profesional para un proceso que realizas frecuentemente en tu trabajo actual (mínimo 3 veces por semana). Este diagrama será usado para:
-- Capacitación de nuevo personal
-- Documentación de procedimientos
-- Identificación de mejoras de eficiencia
-
-**Restricciones:**
-- Máximo 8 pasos en el proceso (para claridad visual)
-- Debe incluir al menos 2 puntos de decisión
-- Formato requerido: flowchart TD (top-down)
-- Presentación ejecutiva (audiencia: directivos)
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-3:** Identificar proceso real de tu trabajo
-2. **Minutos 4-6:** Construir prompt usando framework OSAC
-3. **Minutos 7-12:** Generar código Mermaid con ChatGPT
-4. **Minutos 13-14:** Renderizar en mermaid.live
-5. **Minuto 15:** Exportar PNG y preparar para compartir
-
-### **ENTREGABLES**
-- **Primario:** Archivo PNG del diagrama funcional
-- **Secundario:** Código Mermaid generado
-- **Presentación:** 1 minuto explicando cómo usarás este diagrama
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Aplicabilidad** | Proceso real y útil | Proceso real | Proceso genérico | Proceso irrelevante |
-| **Claridad visual** | Muy fácil seguir | Fácil seguir | Comprensible | Confuso |
-| **Completitud** | Incluye decisiones y excepciones | Incluye decisiones | Flujo básico | Incompleto |
-| **Profesionalismo** | Presentable a directivos | Presentable a equipo | Uso interno | No presentable |
+### **ENTREGABLE ESPERADO**
+Sistema completo funcionando:
+1. Formulario Google operativo
+2. Hoja de cálculo con validaciones automáticas
+3. Script configurado para notificaciones
+4. Demostración con 5 registros de prueba
 
 ### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT (gratuito), mermaid.live
-- **Navegador:** Chrome, Firefox o Safari actualizado
-- **Conocimiento previo:** Ninguno específico
+- Cuenta Google personal
+- Acceso a Google Apps Script
+- IA generativa (ChatGPT/Gemini)
+- Navegador web actualizado
 
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B técnico:** Si mermaid.live falla, usar diagrams.net
-- **Para avanzados:** Añadir swimlanes o subprocesos
-- **Para principiantes:** Proveer ejemplo de proceso (ej: "proceso de compra online")
+### **TIEMPO ESTIMADO**
+- Análisis del problema: 5 minutos
+- Desarrollo en vivo: 25 minutos
+- Pruebas y validación: 10 minutos
+- **Total: 40 minutos**
+
+### **CRITERIOS DE EVALUACIÓN**
+- ✅ Formulario captura datos correctamente
+- ✅ Validaciones funcionan según especificaciones
+- ✅ Email de alerta se envía automáticamente
+- ✅ Código generado es comprensible y documentado
+- ✅ Sistema es escalable para más usuarios
+
+### **NIVEL DE DIFICULTAD**
+🟡 **Intermedio** - Requiere comprensión de flujos automatizados
 
 ---
 
-## 📊 EJERCICIO 2: ANÁLISIS INTELIGENTE DE DATOS PERSONALES
-
-### **INFORMACIÓN GENERAL**
-- **Módulo:** IA como Analista 24/7
-- **Duración:** 15 minutos
-- **Nivel:** Básico
-- **Modalidad:** Individual
+## 📱 EJERCICIO 2: AGENTE CONTENT MARKETING ESPECIALIZADO
 
 ### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Estructurar datos en formato CSV optimizado para IA
-- Generar análisis estadístico completo mediante conversación natural
-- Identificar insights accionables en datos cotidianos
+Crear agente IA especializado para LinkedIn usando metodología Entrada-Proceso-Salida (EPS).
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el CFO de tu vida personal. Necesitas presentar un "reporte financiero personal" a tu "junta directiva familiar" para justificar decisiones de gasto del próximo trimestre.
+### **CASO EMPRESARIAL**
+Eres Community Manager de consultora tecnológica:
+- **Problema actual:** 3 horas semanales creando contenido para LinkedIn
+- **Desafío:** Mantener coherencia de marca, optimizar engagement, generar leads
+- **Audiencia:** CTOs y Directores IT de empresas medianas/grandes
 
-**Tu rol:** Analista financiero personal
+### **ESCENARIO ESPECÍFICO**
+- **Target:** Ejecutivos tecnológicos que toman decisiones de transformación digital
+- **Objetivos:** Posicionar empresa como experta, generar leads calificados
+- **Tono requerido:** Profesional pero accesible, con insights valiosos
+- **Formato:** Posts 150-200 palabras con alto potencial viral
 
-**Problema a resolver:**
-Analizar tus gastos personales de los últimos 6 meses para:
-- Identificar patrones de gasto no evidentes
-- Encontrar oportunidades de optimización
-- Descubrir un insight sorprendente sobre tus hábitos
-- Proponer 2 decisiones financieras basadas en datos
-
-**Datos a utilizar:**
-- **50 transacciones** (mínimo) de los últimos 6 meses
-- **Columnas requeridas:** Fecha, Categoría, Monto, Descripción, Método de pago
-- **Categorías sugeridas:** Alimentación, Transporte, Entretenimiento, Servicios, Compras, Salud
-
-**Restricciones:**
-- Solo datos reales (puede ser aproximado si no tienes registro exacto)
-- Formato CSV válido
-- Análisis debe generar mínimo 1 gráfico
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Crear CSV en Google Sheets con tus datos reales
-2. **Minutos 6-8:** Subir a ChatGPT y aplicar prompt de análisis exploratorio
-3. **Minutos 9-12:** Solicitar gráficos y profundizar en un patrón interesante
-4. **Minutos 13-15:** Identificar y preparar insight sorprendente para compartir
-
-### **ENTREGABLES**
-- **Primario:** Un insight sorprendente sobre tus hábitos de gasto
-- **Secundario:** CSV estructurado con tus datos
-- **Presentación:** 1 minuto compartiendo el descubrimiento más interesante
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Calidad datos** | 50+ registros, 6 columnas completas | 30+ registros, datos completos | 20+ registros, básico | <20 registros |
-| **Insight generado** | Sorprendente y accionable | Interesante y útil | Básico pero válido | Obvio o irrelevante |
-| **Uso de IA** | Múltiples consultas profundas | Varias consultas | Consulta básica | Solo carga datos |
-| **Aplicabilidad** | Cambiará comportamiento real | Información valiosa | Conocimiento general | Sin utilidad práctica |
+### **ENTREGABLE ESPERADO**
+Gema Gemini especializada que produzca:
+1. Configuración completa del agente usando metodología EPS
+2. Post optimizado para LinkedIn listo para publicar
+3. Hashtags relevantes y predicción de engagement
+4. 3 variaciones para testing A/B
+5. Demostración con tema: "Ciberseguridad en transformación digital"
 
 ### **RECURSOS NECESARIOS**
-- **Herramientas:** Google Sheets, ChatGPT (gratuito o Plus)
-- **Datos:** Extractos bancarios o registros personales
-- **Tiempo:** Acceso a información financiera personal
+- Cuenta Gemini Advanced
+- Metodología EPS (proporcionada en clase)
+- Caso de estudio empresa consultora
+- Guidelines de marca básicos
 
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B:** Proporcionar dataset de ejemplo si estudiante no tiene datos
-- **Para avanzados:** Incluir análisis predictivo y presupuesto futuro
-- **Para principiantes:** Proveer plantilla CSV con categorías predefinidas
-- **Alternativa:** Usar datos de gastos laborales en lugar de personales
+### **TIEMPO ESTIMADO**
+- Configuración agente EPS: 15 minutos
+- Generación de contenido: 10 minutos
+- Refinamiento y pruebas: 10 minutos
+- **Total: 35 minutos**
+
+### **CRITERIOS DE EVALUACIÓN**
+- ✅ Agente configurado con metodología EPS completa
+- ✅ Contenido alineado con audiencia objetivo
+- ✅ Tono profesional consistente con marca
+- ✅ Hashtags relevantes y bien segmentados
+- ✅ Variaciones A/B muestran diferenciación estratégica
+
+### **NIVEL DE DIFICULTAD**
+🟡 **Intermedio** - Requiere comprensión de buyer personas y brand voice
 
 ---
 
-## 🌐 EJERCICIO 3: DASHBOARD WEB INTERACTIVO
-
-### **INFORMACIÓN GENERAL**
-- **Módulo:** Dashboards HTML Profesionales
-- **Duración:** 25 minutos
-- **Nivel:** Intermedio
-- **Modalidad:** Individual
+## ⚔️ EJERCICIO 3: ESTRATEGIA MULTIPLATAFORMA OPERATIVA
 
 ### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Crear dashboards web funcionales sin programación
-- Implementar visualizaciones interactivas con filtros
-- Desplegar soluciones web usando Google Sites
+Implementar redundancia operativa usando GPTs y Gems para eliminar dependencia de plataforma única.
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el gerente de ventas de una empresa retail. El director general necesita un dashboard interactivo para la junta directiva del lunes, que permita a los miembros explorar los datos de ventas trimestrales de forma autónoma durante la presentación.
+### **CASO EMPRESARIAL**
+Director de Operaciones en consultora marketing digital:
+- **Problema actual:** Dependencia total de ChatGPT, riesgo operativo alto
+- **Necesidad:** Sistema de backup, integración Google Workspace
+- **Crítico:** Proceso de creación de propuestas comerciales no puede interrumpirse
 
-**Tu rol:** Gerente de ventas / Analista de business intelligence
+### **ESCENARIO ESPECÍFICO**
+- **Proceso crítico:** Generación de propuestas comerciales ($30K-$150K)
+- **Stakeholders:** Clientes enterprise que requieren respuesta rápida
+- **Integración requerida:** Google Drive, Gmail, Google Sheets
+- **Uptime objetivo:** 99.9% disponibilidad operativa
 
-**Problema a resolver:**
-Crear un dashboard web profesional que permita:
-- Visualizar performance de ventas por mes, producto y región
-- Filtrar datos interactivamente durante la presentación
-- Identificar top performers y productos problema
-- Ser accesible vía URL para revisión previa de directivos
-
-**Datos proporcionados:**
-- **30 registros de ventas** del último trimestre
-- **Columnas:** Fecha, Producto, Categoría, Cantidad, Precio, Vendedor, Región
-- **Formato:** CSV limpio y estructurado
-
-**Especificaciones técnicas:**
-- Responsive (funcional en tablets de directivos)
-- Mínimo 4 visualizaciones diferentes
-- Filtros por fecha y región
-- Panel de KPIs destacado
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Preparar y revisar CSV proporcionado
-2. **Minutos 6-15:** Generar dashboard HTML con prompts optimizados
-3. **Minutos 16-20:** Personalizar diseño y añadir filtros
-4. **Minutos 21-25:** Subir a Google Sites y obtener URL funcional
-
-### **ENTREGABLES**
-- **Primario:** URL funcional del dashboard en Google Sites
-- **Secundario:** Código HTML generado
-- **Demostración:** 2 minutos mostrando funcionalidades clave
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Funcionalidad** | Todo funciona perfectamente | Funciona con errores menores | Funciona básicamente | Errores críticos |
-| **Diseño profesional** | Presentable a C-level | Presentable a gerencia | Uso interno | No profesional |
-| **Interactividad** | Filtros + hover + responsive | Filtros + responsive | Solo filtros básicos | Sin interactividad |
-| **Deployment** | URL accesible y rápida | URL accesible | URL con problemas | No desplegado |
+### **ENTREGABLE ESPERADO**
+Sistema dual funcional:
+1. GPT configurado para propuestas comerciales
+2. Gem equivalente con misma funcionalidad
+3. Demostración de redundancia: mismo output por ambas plataformas
+4. Análisis comparativo de fortalezas específicas
+5. Protocolo de switch automático entre sistemas
 
 ### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT/Claude, Google Sites, navegador moderno
-- **Dataset:** Proporcionado por instructor
-- **Cuenta:** Google account para Sites
-- **Conocimiento previo:** Uso básico de navegador web
+- ChatGPT Plus/Pro
+- Gemini Advanced
+- Google Workspace (cuenta básica)
+- Template de propuesta comercial
+- Caso cliente real (anonimizado)
 
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B técnico:** Si Google Sites falla, usar CodePen o JSFiddle
-- **Para avanzados:** Añadir exportación PDF y modo presentación
-- **Para principiantes:** Proporcionar código base parcial para completar
-- **Dataset alternativo:** Datos de marketing digital o recursos humanos
+### **TIEMPO ESTIMADO**
+- Configuración GPT: 10 minutos
+- Replicación en Gem: 10 minutos
+- Pruebas comparativas: 10 minutos
+- Protocolo de contingencia: 10 minutos
+- **Total: 40 minutos**
+
+### **CRITERIOS DE EVALUACIÓN**
+- ✅ Ambos agentes producen outputs equivalentes
+- ✅ Calidad consistente entre plataformas
+- ✅ Tiempo de switch menor a 2 minutos
+- ✅ Especialización por fortalezas naturales documentada
+- ✅ Plan de contingencia operativa claro
+
+### **NIVEL DE DIFICULTAD**
+🔴 **Avanzado** - Requiere pensamiento sistémico y planificación estratégica
 
 ---
 
-## 🧠 EJERCICIO 4: DECISIÓN ESTRATÉGICA CON IA
-
-### **INFORMACIÓN GENERAL**
-- **Módulo:** Decisiones Estratégicas con IA
-- **Duración:** 30 minutos
-- **Nivel:** Avanzado
-- **Modalidad:** Individual
+## 🎭 EJERCICIO 4: AGENTE PROFESIONAL ESPECIALIZADO
 
 ### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Aplicar metodología de decisión estratégica asistida por IA
-- Validar recomendaciones mediante múltiples perspectivas
-- Generar plan de implementación con métricas de seguimiento
+Crear agente IA que refleje expertise profesional único usando configuración avanzada de personalidad.
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el CEO de "RetailMax", una cadena de tiendas de ropa con 15 años en el mercado. La empresa ha crecido consistentemente, pero los últimos 6 meses muestran estancamiento en ventas mientras el e-commerce nacional crece 40% anual.
+### **CASO EMPRESARIAL**
+Consultor senior que necesita escalar su conocimiento:
+- **Problema actual:** Consultas repetitivas consumen 40% del tiempo
+- **Oportunidad:** Replicar experiencia en agente IA especializado
+- **Valor:** Liberar tiempo para casos complejos, mantener calidad consistente
 
-**Tu rol:** CEO / Director General
+### **ESCENARIO ESPECÍFICO**
+- **Rol profesional:** [Estudiante define según su expertise]
+- **Contexto:** Consultoría/asesoría en área de especialización
+- **Stakeholders:** Clientes con diferentes niveles técnicos
+- **Objetivo:** Agente que capture style, conocimiento y criterio profesional
 
-**Situación crítica:**
-El consejo directivo aprobó presupuesto de $500,000 para crecimiento Q4. Tienes dos opciones mutuamente excluyentes:
-
-**OPCIÓN A:** Abrir 3 nuevas tiendas físicas en ciudades secundarias
-- Costo: $480,000 (fit-out + inventario inicial)
-- Timeline: 4 meses implementación
-- ROI proyectado tradicional: 18-24 meses
-
-**OPCIÓN B:** Inversión total en plataforma e-commerce avanzada
-- Costo: $450,000 (plataforma + marketing + logística)
-- Timeline: 2 meses implementación
-- ROI proyectado: 8-12 meses
-
-**Complejidad:** Los datos históricos muestran patrones contradictorios y tu equipo está dividido 50/50.
-
-**Datos disponibles:**
-- 5 años de ventas por tienda (15,000 registros)
-- Performance e-commerce actual (limitado)
-- Datos demográficos mercados objetivo
-- Análisis competencia local y online
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Cargar datos en visor dinámico IA
-2. **Minutos 6-10:** Generar reporte PDF ejecutivo
-3. **Minutos 11-20:** Análisis consultor IA + validación múltiples perspectivas
-4. **Minutos 21-25:** Aplicar "abogado del diablo" para desafiar recomendación
-5. **Minutos 26-30:** Decisión final documentada con plan de seguimiento
-
-### **ENTREGABLES**
-- **Primario:** Decisión justificada (Opción A o B) con 3 argumentos sólidos
-- **Secundario:** Plan de implementación con métricas de seguimiento
-- **Presentación:** 3 minutos defendiendo decisión ante "consejo directivo"
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Uso metodología IA** | 3 fases completas + validación | 3 fases completas | 2 fases + básico | Solo 1 fase |
-| **Calidad argumentación** | Datos + lógica + riesgos | Datos + lógica | Solo datos | Opinión personal |
-| **Viabilidad decisión** | Implementable y medible | Implementable | Conceptualmente válida | No factible |
-| **Defensa ejecutiva** | Convincente para CEO | Convincente para gerencia | Argumento básico | Poco convincente |
+### **ENTREGABLE ESPERADO**
+Agente completamente personalizado:
+1. Configuración completa de identidad profesional
+2. Definición de expertise técnico específico
+3. Estilo de comunicación adaptable por audiencia
+4. Restricciones éticas y operacionales claras
+5. Demostración con 3 consultas típicas de su área
 
 ### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT Plus o Claude Pro (recomendado)
-- **Dataset:** Proporcionado por instructor (retail_5años.csv)
-- **Tiempo:** Acceso completo a herramientas IA durante ejercicio
-- **Mindset:** Pensamiento estratégico y apertura al cambio
+- Plataforma preferida (ChatGPT/Gemini/Character AI)
+- Plantilla de especialización (proporcionada)
+- Casos reales de consultoría del estudiante
+- Framework de comunicación profesional
 
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B:** Si dataset grande falla, usar muestra representativa
-- **Para avanzados:** Incluir análisis financiero detallado (NPV, IRR)
-- **Para principiantes:** Proporcionar framework de decisión más estructurado
-- **Industrias alternativas:** Adaptar a SaaS, manufacturing, o servicios
+### **TIEMPO ESTIMADO**
+- Análisis de expertise personal: 10 minutos
+- Configuración de personalidad: 15 minutos
+- Pruebas con casos reales: 10 minutos
+- Refinamiento y optimización: 10 minutos
+- **Total: 45 minutos**
 
-### **ESCENARIOS DE EXTENSIÓN**
-- **Tiempo extra:** Desarrollar plan de contingencia para opción no elegida
-- **Trabajo grupal:** Dividir clase en "equipos consultores" que presenten a CEO
-- **Seguimiento:** En próxima clase, revisar métricas de decisiones tomadas
+### **CRITERIOS DE EVALUACIÓN**
+- ✅ Agente refleja expertise único del profesional
+- ✅ Comunicación adaptada según audiencia
+- ✅ Consistencia con valores y estilo personal
+- ✅ Restricciones éticas bien definidas
+- ✅ Mejora demostrable vs. agente genérico
 
----
-
-## 🎯 RÚBRICA GENERAL DEL MÓDULO
-
-### **EVALUACIÓN INTEGRAL**
-| Competencia | Peso | Excelente (90-100) | Bueno (80-89) | Suficiente (70-79) | Insuficiente (<70) |
-|-------------|------|-------------------|---------------|-------------------|-------------------|
-| **Dominio técnico IA** | 30% | Usa IA de forma experta | Usa IA efectivamente | Usa IA básicamente | Dificultades técnicas |
-| **Pensamiento analítico** | 25% | Insights profundos | Insights válidos | Análisis básico | Análisis superficial |
-| **Aplicabilidad práctica** | 25% | Soluciones implementables | Soluciones útiles | Soluciones teóricas | Soluciones irrelevantes |
-| **Comunicación resultados** | 20% | Presentación ejecutiva | Presentación clara | Presentación básica | Presentación confusa |
-
-### **INDICADORES DE ÉXITO GENERAL**
-- **Técnico:** 4/4 ejercicios completados funcionalmente
-- **Conceptual:** Demuestra comprensión del valor estratégico de IA
-- **Práctico:** Identifica mínimo 2 aplicaciones reales en su trabajo
-- **Actitudinal:** Muestra confianza para implementar soluciones IA
+### **NIVEL DE DIFICULTAD**
+🔴 **Avanzado** - Requiere introspección profesional y configuración compleja
 
 ---
 
-## 📋 RECURSOS COMPLEMENTARIOS
+## 🎯 PROYECTO INTEGRADOR - TAREA PARA CASA
 
-### **HERRAMIENTAS REQUERIDAS**
-- **ChatGPT:** Cuenta gratuita mínimo, Plus recomendado
-- **Navegador:** Chrome, Firefox o Safari (última versión)
-- **Google Account:** Para Google Sheets y Sites
-- **Editor texto:** Notepad++, VS Code, o similar (opcional)
+### **OBJETIVO GENERAL**
+Implementar ecosistema completo de IA profesional integrando los 4 ejercicios desarrollados.
 
-### **DATASETS PROPORCIONADOS**
-- `gastos_ejemplo.csv` - Para ejercicio 2 (backup)
-- `ventas_retail.csv` - Para ejercicio 3 (30 registros)
-- `retail_estrategico.csv` - Para ejercicio 4 (15,000 registros)
+### **PROYECTO: ECOSISTEMA IA PROFESIONAL**
 
-### **LINKS DE REFERENCIA**
-- **Mermaid Live:** https://mermaid.live/
-- **Google Sites:** https://sites.google.com/
-- **ChatGPT:** https://chat.openai.com/
-- **Claude:** https://claude.ai/
+**Semana 1:** Automatización Apps Script (Ejercicio 1)
+- Implementar sistema financiero en entorno real
+- Documentar ahorros de tiempo y mejoras
 
-### **CONTINGENCIAS TÉCNICAS**
-- **Internet lento:** Datasets locales pre-cargados
-- **Herramientas caídas:** Alternativas para cada ejercicio
-- **Dispositivos limitados:** Ejercicios adaptables a móvil
+**Semana 2:** Sistema Content Marketing (Ejercicio 2)
+- Configurar agente especializado para área profesional
+- Generar 10 piezas de contenido y medir engagement
 
----
+**Semana 3:** Estrategia Multiplataforma (Ejercicio 3)
+- Replicar agente más valioso en ambas plataformas
+- Establecer protocolo de redundancia operativa
+
+**Semana 4:** Especialización Avanzada (Ejercicio 4)
+- Configurar agente profesional completo
+- Testear con stakeholders reales
+
+### **ENTREGABLE FINAL**
+**Presentación 10 minutos:**
+- Demo ecosistema funcionando en vivo
+- Métricas de mejora productividad medidas
+- ROI calculado vs. inversión tiempo/recursos
+- Plan escalamiento para equipo/organización
+
+### **CRITERIOS EVALUACIÓN FINAL**
+- ✅ Integración fluida entre los 4 componentes
+- ✅ Métricas reales de impacto profesional
+- ✅ Sostenibilidad del sistema implementado
+- ✅ Capacidad de transferir conocimiento a otros
+- ✅ Visión estratégica para escalamiento
 
 
 
 
+
+
+
+
+
+
+
+
+
+                    
 </div>
                 
                 <!-- Contenido renderizado -->

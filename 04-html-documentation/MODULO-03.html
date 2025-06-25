@@ -342,339 +342,419 @@
 
 
 # 📋 Ficha de Ejercicios y Actividades
-## Segunda Sesión: Analítica Aumentada y Generación de Reportes
+## Tercera Sesión: Predicción y Decisiones Estratégicas
 **Docente:** Ing. Cesar Uribe | [LinkedIn](https://www.linkedin.com/in/uribealvites/)  
 **Web:** [https://lab.zildar.com](https://lab.zildar.com)
 
 ---
 
-## 🎯 EJERCICIO 1: DIAGRAMAS PROFESIONALES CON MERMAID
 
-### **INFORMACIÓN GENERAL**
-- **Módulo:** ChatGPT + Mermaid
-- **Duración:** 15 minutos
-- **Nivel:** Básico-Intermedio
-- **Modalidad:** Individual
+## 📊 MATRIZ GENERAL DE ACTIVIDADES
 
-### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Aplicar framework OSAC para crear prompts efectivos
-- Generar diagramas profesionales usando IA + Mermaid
-- Crear visualizaciones que reemplacen métodos manuales en su trabajo
-
-### **CASO/ENUNCIADO**
-**Contexto:** Eres consultor de procesos en una empresa mediana. El gerente general te solicita documentar procesos críticos para una auditoría ISO próxima semana.
-
-**Tu rol:** Consultor de procesos / Analista organizacional
-
-**Problema a resolver:** 
-Necesitas crear un diagrama de flujo profesional para un proceso que realizas frecuentemente en tu trabajo actual (mínimo 3 veces por semana). Este diagrama será usado para:
-- Capacitación de nuevo personal
-- Documentación de procedimientos
-- Identificación de mejoras de eficiencia
-
-**Restricciones:**
-- Máximo 8 pasos en el proceso (para claridad visual)
-- Debe incluir al menos 2 puntos de decisión
-- Formato requerido: flowchart TD (top-down)
-- Presentación ejecutiva (audiencia: directivos)
-
-### **PROCESO PASO A PASO**
-1. **Minutos 1-3:** Identificar proceso real de tu trabajo
-2. **Minutos 4-6:** Construir prompt usando framework OSAC
-3. **Minutos 7-12:** Generar código Mermaid con ChatGPT
-4. **Minutos 13-14:** Renderizar en mermaid.live
-5. **Minuto 15:** Exportar PNG y preparar para compartir
-
-### **ENTREGABLES**
-- **Primario:** Archivo PNG del diagrama funcional
-- **Secundario:** Código Mermaid generado
-- **Presentación:** 1 minuto explicando cómo usarás este diagrama
-
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Aplicabilidad** | Proceso real y útil | Proceso real | Proceso genérico | Proceso irrelevante |
-| **Claridad visual** | Muy fácil seguir | Fácil seguir | Comprensible | Confuso |
-| **Completitud** | Incluye decisiones y excepciones | Incluye decisiones | Flujo básico | Incompleto |
-| **Profesionalismo** | Presentable a directivos | Presentable a equipo | Uso interno | No presentable |
-
-### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT (gratuito), mermaid.live
-- **Navegador:** Chrome, Firefox o Safari actualizado
-- **Conocimiento previo:** Ninguno específico
-
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B técnico:** Si mermaid.live falla, usar diagrams.net
-- **Para avanzados:** Añadir swimlanes o subprocesos
-- **Para principiantes:** Proveer ejemplo de proceso (ej: "proceso de compra online")
+| Código | Actividad | Duración | Competencia Principal | Herramientas |
+|--------|-----------|----------|----------------------|--------------|
+| **EJ-01** | MARP Básico | 20 min | Automatización reportes | MARP, VS Code |
+| **EJ-02** | Python Análisis | 25 min | Análisis datos automatizado | Google Colab, ChatGPT |
+| **EJ-03** | Dashboard Interactivo | 30 min | Visualización inteligente | Colab, Widgets |
+| **EJ-04** | Framework Decisional | 45 min | Decisiones data-driven | Colab, SHAP/LIME |
+| **TAREA** | Proyecto Integrador | 1 semana | Integración completa | Stack completo |
 
 ---
 
-## 📊 EJERCICIO 2: ANÁLISIS INTELIGENTE DE DATOS PERSONALES
+## 🎯 EJERCICIO 1: AUTOMATIZACIÓN CON MARP
 
-### **INFORMACIÓN GENERAL**
-- **Módulo:** IA como Analista 24/7
-- **Duración:** 15 minutos
-- **Nivel:** Básico
+### **Identificación**
+- **Código:** EJ-01
+- **Título:** Reporte de Ventas Automatizado con MARP
+- **Duración:** 20 minutos
 - **Modalidad:** Individual
 
-### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Estructurar datos en formato CSV optimizado para IA
-- Generar análisis estadístico completo mediante conversación natural
-- Identificar insights accionables en datos cotidianos
+### **Objetivos de Aprendizaje**
+- Implementar automatización básica de reportes usando Markdown
+- Convertir datos tabulares en presentaciones profesionales
+- Aplicar sintaxis MARP para generación rápida de slides
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el CFO de tu vida personal. Necesitas presentar un "reporte financiero personal" a tu "junta directiva familiar" para justificar decisiones de gasto del próximo trimestre.
+### **Prerrequisitos**
+- **Técnicos:** VS Code instalado, extensión MARP
+- **Conceptuales:** Sintaxis básica Markdown
+- **Archivos:** Dataset proporcionado por instructor
 
-**Tu rol:** Analista financiero personal
+### **Recursos Necesarios**
+- **Dataset:** `ventas_sample.xlsx`
+  - Columnas: producto, precio, cantidad, región
+  - 100 filas de datos de ejemplo
+  - Incluye datos de 5 regiones, 20 productos
+- **Herramientas:** VS Code + MARP Extension
+- **Template:** Plantilla base MARP proporcionada
 
-**Problema a resolver:**
-Analizar tus gastos personales de los últimos 6 meses para:
-- Identificar patrones de gasto no evidentes
-- Encontrar oportunidades de optimización
-- Descubrir un insight sorprendente sobre tus hábitos
-- Proponer 2 decisiones financieras basadas en datos
+### **Enunciado del Caso**
+**Contexto Empresarial:**
+Eres analista de una empresa retail que debe presentar resultados de ventas Q1 a la gerencia. El reporte manual toma 3 horas. Tu objetivo es automatizar la generación usando MARP.
 
-**Datos a utilizar:**
-- **50 transacciones** (mínimo) de los últimos 6 meses
-- **Columnas requeridas:** Fecha, Categoría, Monto, Descripción, Método de pago
-- **Categorías sugeridas:** Alimentación, Transporte, Entretenimiento, Servicios, Compras, Salud
+**Problema a Resolver:**
+Crear una presentación ejecutiva de 5 slides que incluya:
+1. **Slide Título:** Reporte Q1 2025 con datos clave
+2. **Slide Ventas por Región:** Gráfico o tabla comparativa
+3. **Slide Top 5 Productos:** Ranking por ingresos
+4. **Slide Análisis Precios:** Tendencias y rangos
+5. **Slide Conclusiones:** 3 insights principales y recomendaciones
 
 **Restricciones:**
-- Solo datos reales (puede ser aproximado si no tienes registro exacto)
-- Formato CSV válido
-- Análisis debe generar mínimo 1 gráfico
+- Usar solo sintaxis MARP nativa (sin HTML)
+- Presentación debe ser exportable a PDF
+- Diseño profesional apto para ejecutivos
 
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Crear CSV en Google Sheets con tus datos reales
-2. **Minutos 6-8:** Subir a ChatGPT y aplicar prompt de análisis exploratorio
-3. **Minutos 9-12:** Solicitar gráficos y profundizar en un patrón interesante
-4. **Minutos 13-15:** Identificar y preparar insight sorprendente para compartir
+### **Metodología para Instructor**
+1. **Demostración** (5 min): Mostrar sintaxis MARP básica
+2. **Desarrollo** (12 min): Estudiantes crean slides
+3. **Validación** (3 min): Revisar 2-3 ejemplos con clase
 
-### **ENTREGABLES**
-- **Primario:** Un insight sorprendente sobre tus hábitos de gasto
-- **Secundario:** CSV estructurado con tus datos
-- **Presentación:** 1 minuto compartiendo el descubrimiento más interesante
+### **Entregables Esperados**
+- Archivo `.md` con presentación completa
+- PDF exportado de la presentación
+- Screenshot de al menos 1 slide con datos visualizados
 
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Calidad datos** | 50+ registros, 6 columnas completas | 30+ registros, datos completos | 20+ registros, básico | <20 registros |
-| **Insight generado** | Sorprendente y accionable | Interesante y útil | Básico pero válido | Obvio o irrelevante |
-| **Uso de IA** | Múltiples consultas profundas | Varias consultas | Consulta básica | Solo carga datos |
-| **Aplicabilidad** | Cambiará comportamiento real | Información valiosa | Conocimiento general | Sin utilidad práctica |
+### **Criterios de Evaluación**
+- ✅ **Estructura completa** (5 slides requeridos)
+- ✅ **Datos correctos** extraídos del dataset
+- ✅ **Formato profesional** apto para ejecutivos
+- ✅ **Exportación exitosa** a PDF
 
-### **RECURSOS NECESARIOS**
-- **Herramientas:** Google Sheets, ChatGPT (gratuito o Plus)
-- **Datos:** Extractos bancarios o registros personales
-- **Tiempo:** Acceso a información financiera personal
-
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B:** Proporcionar dataset de ejemplo si estudiante no tiene datos
-- **Para avanzados:** Incluir análisis predictivo y presupuesto futuro
-- **Para principiantes:** Proveer plantilla CSV con categorías predefinidas
-- **Alternativa:** Usar datos de gastos laborales en lugar de personales
+### **Troubleshooting Común**
+- **Error export PDF:** Verificar extensión MARP instalada
+- **Datos no aparecen:** Revisar ruta archivo Excel
+- **Formato inconsistente:** Validar sintaxis Markdown
 
 ---
 
-## 🌐 EJERCICIO 3: DASHBOARD WEB INTERACTIVO
+## 🐍 EJERCICIO 2: ANÁLISIS AUTOMATIZADO CON PYTHON
 
-### **INFORMACIÓN GENERAL**
-- **Módulo:** Dashboards HTML Profesionales
+### **Identificación**
+- **Código:** EJ-02
+- **Título:** Análisis de Datos con Prompts Maestros
 - **Duración:** 25 minutos
-- **Nivel:** Intermedio
-- **Modalidad:** Individual
+- **Modalidad:** Individual con asistencia IA
 
-### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Crear dashboards web funcionales sin programación
-- Implementar visualizaciones interactivas con filtros
-- Desplegar soluciones web usando Google Sites
+### **Objetivos de Aprendizaje**
+- Aplicar prompts estructurados para generar código Python funcional
+- Ejecutar análisis exploratorio automatizado en Google Colab
+- Interpretar resultados estadísticos básicos en contexto empresarial
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el gerente de ventas de una empresa retail. El director general necesita un dashboard interactivo para la junta directiva del lunes, que permita a los miembros explorar los datos de ventas trimestrales de forma autónoma durante la presentación.
+### **Prerrequisitos**
+- **Técnicos:** Cuenta Google para Colab, acceso ChatGPT
+- **Conceptuales:** Comprensión básica de análisis de datos
+- **Archivos:** Dataset modelo con errores intencionalmente
 
-**Tu rol:** Gerente de ventas / Analista de business intelligence
+### **Recursos Necesarios**
+- **Dataset:** `ventas_productos_q1_2025.xlsx`
+  - 1,000 filas de productos
+  - Columnas: producto, precio, cantidad, categoria, region, fecha
+  - 10% datos con errores intencionales para práctica
+- **Herramientas:** Google Colab, ChatGPT
+- **Prompts:** 5 prompts maestros proporcionados
 
-**Problema a resolver:**
-Crear un dashboard web profesional que permita:
-- Visualizar performance de ventas por mes, producto y región
-- Filtrar datos interactivamente durante la presentación
-- Identificar top performers y productos problema
-- Ser accesible vía URL para revisión previa de directivos
+### **Enunciado del Caso**
+**Contexto Empresarial:**
+Como analista de datos, recibes un archivo Excel con 1,000 productos del primer trimestre. El archivo puede contener errores y necesitas generar insights rápidos para una reunión ejecutiva en 30 minutos.
 
-**Datos proporcionados:**
-- **30 registros de ventas** del último trimestre
-- **Columnas:** Fecha, Producto, Categoría, Cantidad, Precio, Vendedor, Región
-- **Formato:** CSV limpio y estructurado
+**Problema a Resolver:**
+Usando los 5 prompts maestros, debes:
 
-**Especificaciones técnicas:**
-- Responsive (funcional en tablets de directivos)
-- Mínimo 4 visualizaciones diferentes
-- Filtros por fecha y región
-- Panel de KPIs destacado
+1. **Análisis Básico:** Cargar datos, identificar estructura, generar estadísticas descriptivas
+2. **Detección Problemas:** Encontrar datos faltantes, outliers, inconsistencias
+3. **Comparaciones:** Analizar diferencias entre regiones y categorías
+4. **Dashboard Simple:** Crear gráficos interactivos básicos
+5. **Reporte Ejecutivo:** Generar conclusiones en lenguaje de negocio
 
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Preparar y revisar CSV proporcionado
-2. **Minutos 6-15:** Generar dashboard HTML con prompts optimizados
-3. **Minutos 16-20:** Personalizar diseño y añadir filtros
-4. **Minutos 21-25:** Subir a Google Sites y obtener URL funcional
+**Escenario Específico:**
+La gerencia quiere saber: "¿Qué región está vendiendo mejor y qué productos debemos potenciar o descontinuar?"
 
-### **ENTREGABLES**
-- **Primario:** URL funcional del dashboard en Google Sites
-- **Secundario:** Código HTML generado
-- **Demostración:** 2 minutos mostrando funcionalidades clave
+### **Metodología para Instructor**
+1. **Setup** (5 min): Verificar acceso Colab y carga de datos
+2. **Prompt 1-2** (8 min): Análisis básico y detección errores
+3. **Prompt 3-4** (8 min): Comparaciones y visualización
+4. **Prompt 5** (4 min): Generación insights ejecutivos
 
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Funcionalidad** | Todo funciona perfectamente | Funciona con errores menores | Funciona básicamente | Errores críticos |
-| **Diseño profesional** | Presentable a C-level | Presentable a gerencia | Uso interno | No profesional |
-| **Interactividad** | Filtros + hover + responsive | Filtros + responsive | Solo filtros básicos | Sin interactividad |
-| **Deployment** | URL accesible y rápida | URL accesible | URL con problemas | No desplegado |
+### **Entregables Esperados**
+- Notebook Colab completo con código ejecutado
+- 3-5 gráficos generados automáticamente
+- Lista de 5 insights principales en lenguaje ejecutivo
+- Identificación específica de errores encontrados
 
-### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT/Claude, Google Sites, navegador moderno
-- **Dataset:** Proporcionado por instructor
-- **Cuenta:** Google account para Sites
-- **Conocimiento previo:** Uso básico de navegador web
+### **Criterios de Evaluación**
+- ✅ **Código ejecuta** sin errores críticos
+- ✅ **Insights relevantes** para el negocio
+- ✅ **Gráficos claros** y bien etiquetados
+- ✅ **Detección errores** efectiva
 
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B técnico:** Si Google Sites falla, usar CodePen o JSFiddle
-- **Para avanzados:** Añadir exportación PDF y modo presentación
-- **Para principiantes:** Proporcionar código base parcial para completar
-- **Dataset alternativo:** Datos de marketing digital o recursos humanos
+### **Troubleshooting Común**
+- **Archivo no carga:** Usar `pd.read_excel()` con parámetros específicos
+- **Gráficos no aparecen:** Verificar `%matplotlib inline`
+- **Errores sintaxis:** Copiar código limpio desde ChatGPT
 
 ---
 
-## 🧠 EJERCICIO 4: DECISIÓN ESTRATÉGICA CON IA
+## 📊 EJERCICIO 3: DASHBOARD INTERACTIVO
 
-### **INFORMACIÓN GENERAL**
-- **Módulo:** Decisiones Estratégicas con IA
+### **Identificación**
+- **Código:** EJ-03
+- **Título:** Dashboard Ejecutivo con Widgets Interactivos
 - **Duración:** 30 minutos
-- **Nivel:** Avanzado
 - **Modalidad:** Individual
 
-### **OBJETIVO DE APRENDIZAJE**
-Al finalizar, el estudiante será capaz de:
-- Aplicar metodología de decisión estratégica asistida por IA
-- Validar recomendaciones mediante múltiples perspectivas
-- Generar plan de implementación con métricas de seguimiento
+### **Objetivos de Aprendizaje**
+- Crear interfaces interactivas para exploración de datos no técnicos
+- Implementar widgets de filtrado y visualización dinámica
+- Diseñar experiencia usuario intuitiva para stakeholders
 
-### **CASO/ENUNCIADO**
-**Contexto:** Eres el CEO de "RetailMax", una cadena de tiendas de ropa con 15 años en el mercado. La empresa ha crecido consistentemente, pero los últimos 6 meses muestran estancamiento en ventas mientras el e-commerce nacional crece 40% anual.
+### **Prerrequisitos**
+- **Técnicos:** Colab funcional, comprensión widgets básicos
+- **Conceptuales:** Principios UX básicos, audiencia no técnica
+- **Base:** Ejercicio 2 completado exitosamente
 
-**Tu rol:** CEO / Director General
+### **Recursos Necesarios**
+- **Dataset:** Mismo del Ejercicio 2 (ya limpio)
+- **Bibliotecas:** ipywidgets, plotly, matplotlib
+- **Template:** Código base widgets proporcionado por instructor
 
-**Situación crítica:**
-El consejo directivo aprobó presupuesto de $500,000 para crecimiento Q4. Tienes dos opciones mutuamente excluyentes:
+### **Enunciado del Caso**
+**Contexto Empresarial:**
+El gerente general no es técnico pero quiere explorar los datos de ventas por sí mismo. Necesita un dashboard tan fácil de usar como "Netflix" pero para datos empresariales.
 
-**OPCIÓN A:** Abrir 3 nuevas tiendas físicas en ciudades secundarias
-- Costo: $480,000 (fit-out + inventario inicial)
-- Timeline: 4 meses implementación
-- ROI proyectado tradicional: 18-24 meses
+**Problema a Resolver:**
+Crear un dashboard interactivo que permita:
 
-**OPCIÓN B:** Inversión total en plataforma e-commerce avanzada
-- Costo: $450,000 (plataforma + marketing + logística)
-- Timeline: 2 meses implementación
-- ROI proyectado: 8-12 meses
+1. **Menú Desplegable:** Filtrar por categoría de producto
+2. **Botones Radio:** Seleccionar región específica
+3. **Slider de Rango:** Ajustar rango de precios a analizar
+4. **Gráficos Dinámicos:** Que se actualicen automáticamente con filtros
+5. **Botón Descarga:** Exportar datos filtrados a Excel
 
-**Complejidad:** Los datos históricos muestran patrones contradictorios y tu equipo está dividido 50/50.
+**Requerimientos UX:**
+- Interface limpia, sin código visible
+- Instrucciones simples en pantalla
+- Respuesta inmediata a cambios
+- Tolerancia a errores del usuario
 
-**Datos disponibles:**
-- 5 años de ventas por tienda (15,000 registros)
-- Performance e-commerce actual (limitado)
-- Datos demográficos mercados objetivo
-- Análisis competencia local y online
+### **Metodología para Instructor**
+1. **Demo interactividad** (5 min): Mostrar resultado esperado
+2. **Widgets básicos** (10 min): Crear controles paso a paso
+3. **Conectar gráficos** (10 min): Linking interactivo
+4. **Testing UX** (5 min): Probar usabilidad
 
-### **PROCESO PASO A PASO**
-1. **Minutos 1-5:** Cargar datos en visor dinámico IA
-2. **Minutos 6-10:** Generar reporte PDF ejecutivo
-3. **Minutos 11-20:** Análisis consultor IA + validación múltiples perspectivas
-4. **Minutos 21-25:** Aplicar "abogado del diablo" para desafiar recomendación
-5. **Minutos 26-30:** Decisión final documentada con plan de seguimiento
+### **Entregables Esperados**
+- Dashboard completamente funcional
+- Mínimo 3 tipos de widgets implementados
+- 2-3 gráficos que respondan a filtros
+- Documentación básica uso para no técnicos
 
-### **ENTREGABLES**
-- **Primario:** Decisión justificada (Opción A o B) con 3 argumentos sólidos
-- **Secundario:** Plan de implementación con métricas de seguimiento
-- **Presentación:** 3 minutos defendiendo decisión ante "consejo directivo"
+### **Criterios de Evaluación**
+- ✅ **Funcionalidad completa** todos los widgets
+- ✅ **Sincronización** gráficos con filtros
+- ✅ **Usabilidad** intuitiva para no técnicos
+- ✅ **Estabilidad** sin errores con uso normal
 
-### **CRITERIOS DE EVALUACIÓN**
-| Criterio | Excelente (4) | Bueno (3) | Suficiente (2) | Insuficiente (1) |
-|----------|---------------|-----------|----------------|------------------|
-| **Uso metodología IA** | 3 fases completas + validación | 3 fases completas | 2 fases + básico | Solo 1 fase |
-| **Calidad argumentación** | Datos + lógica + riesgos | Datos + lógica | Solo datos | Opinión personal |
-| **Viabilidad decisión** | Implementable y medible | Implementable | Conceptualmente válida | No factible |
-| **Defensa ejecutiva** | Convincente para CEO | Convincente para gerencia | Argumento básico | Poco convincente |
-
-### **RECURSOS NECESARIOS**
-- **Herramientas:** ChatGPT Plus o Claude Pro (recomendado)
-- **Dataset:** Proporcionado por instructor (retail_5años.csv)
-- **Tiempo:** Acceso completo a herramientas IA durante ejercicio
-- **Mindset:** Pensamiento estratégico y apertura al cambio
-
-### **VARIACIONES/ADAPTACIONES**
-- **Plan B:** Si dataset grande falla, usar muestra representativa
-- **Para avanzados:** Incluir análisis financiero detallado (NPV, IRR)
-- **Para principiantes:** Proporcionar framework de decisión más estructurado
-- **Industrias alternativas:** Adaptar a SaaS, manufacturing, o servicios
-
-### **ESCENARIOS DE EXTENSIÓN**
-- **Tiempo extra:** Desarrollar plan de contingencia para opción no elegida
-- **Trabajo grupal:** Dividir clase en "equipos consultores" que presenten a CEO
-- **Seguimiento:** En próxima clase, revisar métricas de decisiones tomadas
+### **Variaciones Posibles**
+- **Básica:** Solo dropdown y 1 gráfico
+- **Intermedia:** Múltiples widgets, 2-3 gráficos
+- **Avanzada:** Widgets complejos, exportación, tooltips
 
 ---
 
-## 🎯 RÚBRICA GENERAL DEL MÓDULO
+## 🧠 EJERCICIO 4: FRAMEWORK DECISIONAL COMPLETO
 
-### **EVALUACIÓN INTEGRAL**
-| Competencia | Peso | Excelente (90-100) | Bueno (80-89) | Suficiente (70-79) | Insuficiente (<70) |
-|-------------|------|-------------------|---------------|-------------------|-------------------|
-| **Dominio técnico IA** | 30% | Usa IA de forma experta | Usa IA efectivamente | Usa IA básicamente | Dificultades técnicas |
-| **Pensamiento analítico** | 25% | Insights profundos | Insights válidos | Análisis básico | Análisis superficial |
-| **Aplicabilidad práctica** | 25% | Soluciones implementables | Soluciones útiles | Soluciones teóricas | Soluciones irrelevantes |
-| **Comunicación resultados** | 20% | Presentación ejecutiva | Presentación clara | Presentación básica | Presentación confusa |
+### **Identificación**
+- **Código:** EJ-04
+- **Título:** Decisiones Estratégicas con Framework 5 Pasos
+- **Duración:** 45 minutos
+- **Modalidad:** Individual con validación grupal
 
-### **INDICADORES DE ÉXITO GENERAL**
-- **Técnico:** 4/4 ejercicios completados funcionalmente
-- **Conceptual:** Demuestra comprensión del valor estratégico de IA
-- **Práctico:** Identifica mínimo 2 aplicaciones reales en su trabajo
-- **Actitudinal:** Muestra confianza para implementar soluciones IA
+### **Objetivos de Aprendizaje**
+- Implementar metodología completa análisis → decisión
+- Aplicar técnicas interpretabilidad (SHAP/LIME) en contexto empresarial
+- Generar recomendaciones accionables con justificación cuantitativa
+
+### **Prerrequisitos**
+- **Técnicos:** Dominio Colab, conceptos ML básicos
+- **Conceptuales:** Framework 5 pasos, SHAP vs LIME
+- **Experiencia:** Ejercicios 1-3 completados
+
+### **Recursos Necesarios**
+- **Dataset:** `decisiones_estrategicas_modelo.xlsx`
+  - 2,000 filas de datos empresariales
+  - 15 variables: financieras, operacionales, mercado
+  - Escenario retail/manufactura
+- **Bibliotecas:** shap, lime, sklearn, pandas
+- **Templates:** Código base para modelo predictivo
+
+### **Enunciado del Caso**
+**Contexto Empresarial:**
+Eres director de estrategia de una empresa con 2,000 productos. La junta directiva necesita decidir:
+- ¿Qué productos descontinuar?
+- ¿Dónde invertir recursos limitados?
+- ¿Qué factores impulsan el éxito/fracaso?
+
+**Datos Disponibles:**
+- Histórico 24 meses performance productos
+- Variables: ventas, margen, costos, competencia, tendencias
+- Métricas objetivo: ROI, crecimiento, sostenibilidad
+
+**Problema a Resolver:**
+Implementar Framework 5 Pasos completo:
+
+1. **Contextualización:** Análisis situación empresa y mercado
+2. **Predicción:** Modelos performance próximos 6-12 meses
+3. **Interpretabilidad:** SHAP para explicar drivers de éxito
+4. **Recomendaciones:** Plan específico por segmento productos
+5. **Documentación:** Reporte ejecutivo con business case
+
+**Deliverable Final:**
+Presentación 10 minutos con decisiones específicas y justificación cuantitativa.
+
+### **Metodología para Instructor**
+1. **Contextualización** (8 min): Análisis exploratorio dataset
+2. **Modelado predictivo** (12 min): Crear modelo base
+3. **SHAP implementation** (10 min): Interpretabilidad
+4. **Generación recomendaciones** (10 min): Traducir a acciones
+5. **Validación grupal** (5 min): Peer review resultados
+
+### **Entregables Esperados**
+- Notebook con 5 pasos implementados
+- Modelo predictivo funcional con métricas
+- Visualizaciones SHAP interpretables
+- Lista 5-7 recomendaciones específicas con ROI estimado
+- Slide deck ejecutivo (5 slides máximo)
+
+### **Criterios de Evaluación**
+- ✅ **Completitud** framework (5 pasos implementados)
+- ✅ **Validez técnica** modelo y métricas
+- ✅ **Interpretabilidad** clara SHAP/LIME
+- ✅ **Accionabilidad** recomendaciones específicas
+- ✅ **Comunicación** ejecutiva efectiva
+
+### **Troubleshooting Común**
+- **SHAP install error:** `!pip install shap` primero
+- **Modelo no converge:** Verificar scaling datos
+- **Interpretaciones confusas:** Simplificar a top 5 features
 
 ---
 
-## 📋 RECURSOS COMPLEMENTARIOS
+## 🚀 TAREA FINAL: PROYECTO INTEGRADOR
 
-### **HERRAMIENTAS REQUERIDAS**
-- **ChatGPT:** Cuenta gratuita mínimo, Plus recomendado
-- **Navegador:** Chrome, Firefox o Safari (última versión)
-- **Google Account:** Para Google Sheets y Sites
-- **Editor texto:** Notepad++, VS Code, o similar (opcional)
+### **Identificación**
+- **Código:** TAREA-FINAL
+- **Título:** Sistema Automatizado Integral IA
+- **Duración:** 1 semana (entrega siguiente clase)
+- **Modalidad:** Individual
 
-### **DATASETS PROPORCIONADOS**
-- `gastos_ejemplo.csv` - Para ejercicio 2 (backup)
-- `ventas_retail.csv` - Para ejercicio 3 (30 registros)
-- `retail_estrategico.csv` - Para ejercicio 4 (15,000 registros)
+### **Objetivos de Aprendizaje**
+- Integrar todas las competencias desarrolladas en proyecto real
+- Demostrar dominio completo stack tecnológico
+- Crear solución empresarial escalable y reutilizable
 
-### **LINKS DE REFERENCIA**
-- **Mermaid Live:** https://mermaid.live/
-- **Google Sites:** https://sites.google.com/
-- **ChatGPT:** https://chat.openai.com/
-- **Claude:** https://claude.ai/
+### **Prerrequisitos**
+- **Técnicos:** Todos los ejercicios 1-4 completados exitosamente
+- **Conceptuales:** Comprensión integral metodologías enseñadas
+- **Recursos:** Acceso dataset real o simulado de calidad empresarial
 
-### **CONTINGENCIAS TÉCNICAS**
-- **Internet lento:** Datasets locales pre-cargados
-- **Herramientas caídas:** Alternativas para cada ejercicio
-- **Dispositivos limitados:** Ejercicios adaptables a móvil
+### **Enunciado del Proyecto**
+**Contexto:**
+Desarrollar un sistema automatizado completo que demuestre el potencial de IA aplicada en transformación de procesos empresariales tradicionales.
+
+**Componentes Obligatorios:**
+
+1. **Ingesta Automatizada**
+   - Leer Excel con mínimo 6 columnas, 500+ filas
+   - Limpieza y validación automática datos
+   - Error handling robusto
+
+2. **Triple Generación Formatos**
+   - **MARP:** Presentación ejecutiva automática
+   - **HTML:** Dashboard interactivo con widgets
+   - **PPTX:** Reporte PowerPoint profesional
+
+3. **Análisis Inteligente**
+   - Dashboard interactivo con mínimo 3 widgets
+   - Implementación SHAP o LIME para interpretabilidad
+   - Generación insights automática
+
+4. **Decisiones Automatizadas**
+   - Framework 5 pasos implementado
+   - Recomendaciones específicas con ROI
+   - Reporte ejecutivo Word automático
+
+5. **Interface Usuario**
+   - Botones descarga cada formato
+   - Instrucciones uso claras
+   - Tolerancia errores usuario
+
+### **Casos Sugeridos**
+- **Retail:** Optimización portafolio productos
+- **Financiero:** Análisis riesgo crediticio
+- **RRHH:** Predicción rotación empleados
+- **Marketing:** Segmentación clientes
+- **Operaciones:** Optimización inventarios
+
+### **Entregables Finales**
+1. **Notebook Colab** completo y documentado
+2. **3 archivos generados** (MARP, HTML, PPTX)
+3. **Dashboard funcional** con widgets
+4. **Reporte Word** ejecutivo automático
+5. **Video demo** 5 minutos uso del sistema
+6. **Análisis ROI** tiempo ahorrado vs método manual
+
+### **Criterios de Evaluación**
+- ✅ **Integración completa** (40%): Todos componentes funcionan
+- ✅ **Calidad técnica** (25%): Código limpio, eficiente
+- ✅ **Usabilidad** (20%): Interface intuitiva, robusto
+- ✅ **Impacto empresarial** (15%): ROI demostrable, escalable
 
 ---
 
+## 📊 RECURSOS COMPLEMENTARIOS
+
+### **Datasets Proporcionados**
+- `ventas_sample.xlsx` - Ejercicio 1 (100 filas)
+- `ventas_productos_q1_2025.xlsx` - Ejercicios 2-3 (1,000 filas)
+- `decisiones_estrategicas_modelo.xlsx` - Ejercicio 4 (2,000 filas)
+
+### **Templates de Código**
+- MARP base template
+- Widgets básicos Colab
+- SHAP implementation starter
+- Prompts maestros optimizados
+
+### **Criterios Evaluación General**
+- **Funcionalidad:** ¿Funciona como se especifica?
+- **Calidad:** ¿Código limpio y bien documentado?
+- **Usabilidad:** ¿Fácil de usar para no técnicos?
+- **Impacto:** ¿Genera valor empresarial demostrable?
+
+### **Soporte Técnico**
+- **Durante clase:** Instructor disponible para troubleshooting
+- **Fuera clase:** Foro Discord para consultas
+- **Recursos:** Documentación adicional en repositorio curso
+
+---
+
+**Preparado por:** Ing. Cesar Uribe  
+**Revisión:** v1.0  
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                    
 </div>
                 
                 <!-- Contenido renderizado -->
