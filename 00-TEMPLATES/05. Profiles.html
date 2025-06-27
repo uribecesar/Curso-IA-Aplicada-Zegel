@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfiles del Curso IA Aplicada</title>
+  <style>
+    :root {
+      --primary-color: #FE004E;
+      --primary-light: #ff4d83;
+      --primary-dark: #c50040;
+      --text-dark: #333333;
+      --text-light: #ffffff;
+      --bg-light: #f8f9fa;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      padding: 30px 0;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .header-bg {
+      position: absolute;
+      right: -50px;
+      top: -50px;
+      width: 300px;
+      height: 300px;
+      background-color: var(--primary-light);
+      border-radius: 50%;
+      opacity: 0.3;
+      z-index: 1;
+    }
+    
+    .intro-section {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 0 0 15px 15px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+    }
+    
+    .intro-section h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    
+    .profiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    
+    .profile-card {
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-header {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .card-header .icon {
+      font-size: 2.5rem;
+      margin-right: 15px;
+    }
+    
+    .card-header h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .card-body {
+      padding: 20px;
+    }
+    
+    .criteria-list {
+      margin-bottom: 20px;
+    }
+    
+    .criteria-list h4 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }
+    
+    .criteria-list h4 span {
+      margin-right: 8px;
+    }
+    
+    .criteria-list ul {
+      list-style-type: none;
+      margin-left: 15px;
+    }
+    
+    .criteria-list ul li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 25px;
+    }
+    
+    .criteria-list ul li:before {
+      content: "✓";
+      color: var(--primary-color);
+      position: absolute;
+      left: 0;
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: #e9ecef;
+      margin: 20px 0;
+    }
+    
+    .footer-section {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+    }
+    
+    .footer-section h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    
+    .step {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+      text-align: center;
+    }
+    
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 auto 15px;
+    }
+    
+    .step h3 {
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+    }
+    
+    @media (max-width: 768px) {
+      .profiles-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .steps {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-bg"></div>
+      <h1>📊 Perfiles del Curso IA Aplicada</h1>
+      <p>Identifica tu perfil ideal y los objetivos que alcanzarás en nuestro curso multidisciplinario</p>
+    </header>
+    
+    <section class="intro-section">
+      <h2>🔍 ¿Qué tipo de perfil eres tú?</h2>
+      <p>Esta guía te ayudará a identificar tu perfil y los objetivos específicos que podrás alcanzar en nuestro curso multidisciplinario de IA Aplicada. Identifica cuál se ajusta mejor a tus necesidades y expectativas.</p>
+    </section>
+    
+    <div class="profiles-grid">
+      <!-- Perfil 1 -->
+      <div class="profile-card">
+        <div class="card-header">
+          <div class="icon">🧍‍♂️</div>
+          <h3>IA para Todos<br>(Usuarios Generales)</h3>
+        </div>
+        <div class="card-body">
+          <div class="criteria-list">
+            <h4><span>🎯</span> ¿Este es tu perfil si...</h4>
+            <ul>
+              <li>No tienes experiencia previa con IA pero quieres empezar a utilizarla</li>
+              <li>Buscas mejorar tu productividad personal y profesional</li>
+              <li>Te interesa mantenerte actualizado en nuevas tecnologías</li>
+              <li>Deseas entender qué es realmente la IA más allá del hype</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>🚀</span> ¿Qué lograrás?</h4>
+            <ul>
+              <li>Dominarás los fundamentos técnicos esenciales de la IA moderna</li>
+              <li>Aprenderás a utilizar eficazmente herramientas como ChatGPT, Copilot y Gemini</li>
+              <li>Desarrollarás criterio para evaluar nuevas herramientas de IA</li>
+              <li>Aplicarás la IA en contextos cotidianos y laborales inmediatamente</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>💡</span> Casos de uso:</h4>
+            <ul>
+              <li>Automatización de tareas repetitivas</li>
+              <li>Creación de contenido asistido por IA</li>
+              <li>Búsqueda avanzada de información</li>
+              <li>Resolución de problemas con apoyo de IA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Perfil 2 -->
+      <div class="profile-card">
+        <div class="card-header">
+          <div class="icon">📊</div>
+          <h3>IA para Análisis<br>de Datos</h3>
+        </div>
+        <div class="card-body">
+          <div class="criteria-list">
+            <h4><span>🎯</span> ¿Este es tu perfil si...</h4>
+            <ul>
+              <li>Trabajas con datos regularmente (Excel, bases de datos, reportes)</li>
+              <li>Buscas optimizar procesos de análisis</li>
+              <li>Necesitas extraer insights de forma más eficiente</li>
+              <li>Quieres automatizar tareas relacionadas con datos</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>🚀</span> ¿Qué lograrás?</h4>
+            <ul>
+              <li><strong>Nivel 1:</strong> Análisis rápido de documentos y hojas de cálculo usando IA generativa</li>
+              <li><strong>Nivel 2:</strong> Implementación de asistentes de IA para mejorar tu flujo de trabajo analítico</li>
+              <li><strong>Nivel 3:</strong> Combinación de IA con Python para automatizar y potenciar análisis predictivos</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>💡</span> Casos de uso:</h4>
+            <ul>
+              <li>Generación automática de reportes y visualizaciones</li>
+              <li>Detección de patrones y anomalías en conjuntos de datos</li>
+              <li>Limpieza y transformación de datos asistida por IA</li>
+              <li>Dashboards dinámicos con insights impulsados por IA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Perfil 3 -->
+      <div class="profile-card">
+        <div class="card-header">
+          <div class="icon">🛠️</div>
+          <h3>IA como Herramienta<br>de Apoyo Profesional</h3>
+        </div>
+        <div class="card-body">
+          <div class="criteria-list">
+            <h4><span>🎯</span> ¿Este es tu perfil si...</h4>
+            <ul>
+              <li>Trabajas en un nicho específico (legal, marketing, RRHH, etc.)</li>
+              <li>Buscas soluciones específicas para tu campo profesional</li>
+              <li>Quieres optimizar flujos de trabajo específicos</li>
+              <li>Necesitas automatizar tareas administrativas o repetitivas</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>🚀</span> ¿Qué lograrás?</h4>
+            <ul>
+              <li>Desarrollarás un marco metodológico para identificar oportunidades de IA</li>
+              <li>Crearás un documento guía personalizado de aplicación de IA</li>
+              <li>Implementarás soluciones ligeras hasta desarrollo básico en Python</li>
+              <li>Medirás el impacto real de la IA en tu productividad profesional</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>💡</span> Casos de uso:</h4>
+            <ul>
+              <li>Automatización de procesos específicos de tu industria</li>
+              <li>Creación de flujos de trabajo optimizados</li>
+              <li>Desarrollo de herramientas personalizadas para tu nicho</li>
+              <li>Integración de múltiples tecnologías en soluciones específicas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Perfil 4 -->
+      <div class="profile-card">
+        <div class="card-header">
+          <div class="icon">🧑‍🏫</div>
+          <h3>IA para Educadores<br>y Formadores</h3>
+        </div>
+        <div class="card-body">
+          <div class="criteria-list">
+            <h4><span>🎯</span> ¿Este es tu perfil si...</h4>
+            <ul>
+              <li>Eres docente, instructor o formador</li>
+              <li>Buscas innovar en tus métodos de enseñanza</li>
+              <li>Quieres personalizar el aprendizaje para tus estudiantes</li>
+              <li>Te interesa la creación eficiente de contenidos educativos</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>🚀</span> ¿Qué lograrás?</h4>
+            <ul>
+              <li>Integrarás la IA en todas las fases del proceso educativo</li>
+              <li>Crearás materiales didácticos personalizados y adaptables</li>
+              <li>Implementarás sistemas de evaluación asistidos por IA</li>
+              <li>Desarrollarás contenidos audiovisuales educativos de forma eficiente</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>💡</span> Casos de uso:</h4>
+            <ul>
+              <li>Generación de planes de lección y materiales adaptados</li>
+              <li>Sistemas de evaluación automática con retroalimentación personalizada</li>
+              <li>Creación de experiencias de aprendizaje interactivas</li>
+              <li>Desarrollo de contenido multimedia educativo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Perfil 5 -->
+      <div class="profile-card">
+        <div class="card-header">
+          <div class="icon">🧑‍💼</div>
+          <h3>IA para Tomadores<br>de Decisiones</h3>
+        </div>
+        <div class="card-body">
+          <div class="criteria-list">
+            <h4><span>🎯</span> ¿Este es tu perfil si...</h4>
+            <ul>
+              <li>Ocupas un puesto directivo o gerencial</li>
+              <li>Necesitas evaluar la implementación de IA en tu organización</li>
+              <li>Quieres entender el impacto estratégico de la IA sin tecnicismos</li>
+              <li>Buscas liderar proyectos de transformación digital</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>🚀</span> ¿Qué lograrás?</h4>
+            <ul>
+              <li>Comprenderás los principios para adoptar IA estratégicamente</li>
+              <li>Identificarás roles y perfiles clave para equipos con IA</li>
+              <li>Evaluarás riesgos, costos y beneficios de implementaciones de IA</li>
+              <li>Tomarás decisiones informadas sin depender de modas tecnológicas</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>💡</span> Casos de uso:</h4>
+            <ul>
+              <li>Evaluación de proyectos de IA para tu organización</li>
+              <li>Planificación estratégica de transformación digital</li>
+              <li>Análisis de retorno de inversión en tecnologías de IA</li>
+              <li>Gestión eficiente de equipos multidisciplinarios</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Perfil 6 -->
+      <div class="profile-card">
+        <div class="card-header">
+          <div class="icon">🧠</div>
+          <h3>Introducción a la<br>Ingeniería de IA</h3>
+        </div>
+        <div class="card-body">
+          <div class="criteria-list">
+            <h4><span>🎯</span> ¿Este es tu perfil si...</h4>
+            <ul>
+              <li>Tienes conocimientos básicos de programación o tecnología</li>
+              <li>Quieres desarrollar tus propias soluciones basadas en IA</li>
+              <li>Buscas crear productos personalizados</li>
+              <li>Te interesa profundizar en los aspectos técnicos de la IA</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>🚀</span> ¿Qué lograrás?</h4>
+            <ul>
+              <li>Implementarás modelos de IA locales en tu ordenador</li>
+              <li>Crearás tu propio asistente tipo "ChatGPT" con datos personalizados</li>
+              <li>Desarrollarás agentes inteligentes usando herramientas como n8n</li>
+              <li>Integrarás soluciones de IA en tu ecosistema profesional existente</li>
+            </ul>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="criteria-list">
+            <h4><span>💡</span> Casos de uso:</h4>
+            <ul>
+              <li>Desarrollo de chatbots especializados para tu industria</li>
+              <li>Creación de sistemas de recomendación personalizados</li>
+              <li>Automatización avanzada con agentes inteligentes</li>
+              <li>Implementación de soluciones de PLN a medida</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <section class="footer-section">
+      <h2>📌 ¿Cómo usar esta guía?</h2>
+      
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Identifica tu perfil principal</h3>
+          <p>Según tus necesidades e intereses actuales</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Revisa los objetivos específicos</h3>
+          <p>Que lograrás en ese perfil durante el curso</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Explora los casos de uso</h3>
+          <p>Para visualizar aplicaciones prácticas</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Considera perfiles secundarios</h3>
+          <p>Que puedan complementar tu formación</p>
+        </div>
+      </div>
+      
+      <p style="text-align: center; font-style: italic;">Recuerda que estos perfiles no son excluyentes: muchos participantes combinan elementos de varios perfiles según sus necesidades específicas.</p>
+    </section>
+    
+    <section class="footer-section">
+      <h2>🚀 Próximos Pasos</h2>
+      <p>Una vez identificado tu perfil, podremos personalizar tu experiencia de aprendizaje para maximizar los beneficios del curso "IA Aplicada" según tus objetivos particulares.</p>
+    </section>
+  </div>
+</body>
+</html>
