@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cierre del Curso - IA Aplicada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --text-primary: rgba(255, 255, 255, 0.95);
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-medium: 0 15px 35px rgba(31, 38, 135, 0.2);
+            --shadow-heavy: 0 25px 50px rgba(31, 38, 135, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated background particles */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header Section */
+        .hero-section {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 4rem 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff, #f0f0f0, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255,255,255,0.5);
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-section .course-badge {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--accent-gradient);
+            border-radius: 50px;
+            font-weight: 600;
+            color: white;
+            box-shadow: var(--shadow-light);
+            animation: pulse 2s infinite;
+        }
+
+        /* Thanks Section */
+        .thanks-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-medium);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thanks-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        .thanks-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .thanks-section p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Resources Grid */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .resource-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 2.5rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-medium);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .resource-card:hover::before {
+            opacity: 1;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-heavy);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow-light);
+            animation: iconPulse 2s infinite ease-in-out;
+        }
+
+        .card-icon.whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .card-icon.youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+        .card-icon.web { background: linear-gradient(135deg, #4285F4, #1a73e8); }
+        .card-icon.drive { background: linear-gradient(135deg, #4285F4, #34A853); }
+        .card-icon.linkedin { background: linear-gradient(135deg, #0077B5, #005885); }
+        .card-icon.live { background: linear-gradient(135deg, #FF6B6B, #FF8E8E); }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .card-btn:hover::before {
+            left: 100%;
+        }
+
+        .card-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-light);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        /* Live Schedule Card */
+        .schedule-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-medium);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .schedule-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, rgba(255,255,255,0.1), transparent, rgba(255,255,255,0.1));
+            animation: rotate 15s linear infinite;
+        }
+
+        .schedule-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .schedule-card h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .schedule-time {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #4facfe;
+            margin-bottom: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .schedule-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 3rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-medium);
+            text-align: center;
+            position: relative;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: var(--glass-bg);
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info a {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #fff;
+        }
+
+        /* Animations */
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 30px rgba(255,255,255,0.5); }
+            100% { text-shadow: 0 0 60px rgba(255,255,255,0.8); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Staggered animations */
+        .resource-card {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .resource-card:nth-child(1) { animation-delay: 0.1s; }
+        .resource-card:nth-child(2) { animation-delay: 0.2s; }
+        .resource-card:nth-child(3) { animation-delay: 0.3s; }
+        .resource-card:nth-child(4) { animation-delay: 0.4s; }
+        .resource-card:nth-child(5) { animation-delay: 0.5s; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-section {
+                padding: 2rem 1rem;
+            }
+            
+            .resource-card {
+                padding: 2rem;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Inteligencia Artificial Aplicada</h1>
+                <p class="subtitle">Zegel • Grupo Junio • 2025</p>
+                <div class="course-badge">🎓 Módulo Completado</div>
+            </div>
+        </div>
+
+        <div class="thanks-section">
+            <h2>¡Gracias por ser parte de esta experiencia!</h2>
+            <p>Tu dedicación y compromiso han sido fundamentales para el éxito de este programa. Has demostrado que el futuro de la inteligencia artificial está en buenas manos.</p>
+        </div>
+
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="card-header">
+                    <div class="card-icon whatsapp">💬</div>
+                    <h3 class="card-title">Comunidad WhatsApp</h3>
+                </div>
+                <p class="card-description">Únete al grupo gestionado por los participantes donde se continúan compartiendo conocimientos, colaborando en proyectos y manteniendo la red de contactos profesionales.</p>
+                <a href="https://chat.whatsapp.com/Bv8X4FgPO14BRlI7aZNY5z?mode=ac_t" class="card-btn" target="_blank">
+                    <span>📱</span> Acceder al Grupo
+                </a>
+            </div>
+
+            <div class="resource-card">
+                <div class="card-header">
+                    <div class="card-icon youtube">🎥</div>
+                    <h3 class="card-title">Biblioteca de Videos</h3>
+                </div>
+                <p class="card-description">Accede a nuestra colección completa de clases grabadas. Repasa conceptos, profundiza en técnicas avanzadas y mantén tus conocimientos actualizados.</p>
+                <a href="https://youtube.com/playlist?list=PL7QwfssTl89iYM0zcN84c98OgpBcOsk59&si=eV3VskFXkMqhOmi6" class="card-btn" target="_blank">
+                    <span>📺</span> Ver Contenido
+                </a>
+            </div>
+
+            <div class="resource-card">
+                <div class="card-header">
+                    <div class="card-icon web">🌐</div>
+                    <h3 class="card-title">Portal Académico</h3>
+                </div>
+                <p class="card-description">Mantente conectado con las próximas actualizaciones del programa. Accede a nuevos módulos, recursos adicionales y contenido exclusivo.</p>
+                <a href="https://uribecesar.github.io/Curso-IA-Aplicada-Zegel/" class="card-btn" target="_blank">
+                    <span>🚀</span> Explorar Portal
+                </a>
+            </div>
+
+            <div class="resource-card">
+                <div class="card-header">
+                    <div class="card-icon drive">📚</div>
+                    <h3 class="card-title">Biblioteca Digital</h3>
+                </div>
+                <p class="card-description">Colección curada de libros, papers y recursos de investigación para profundizar en los aspectos más avanzados de la inteligencia artificial.</p>
+                <a href="https://drive.google.com/drive/folders/1JWCITD6czZjCkshnGhZ9sPEeOlaVKDI0?usp=drive_link" class="card-btn" target="_blank">
+                    <span>📖</span> Acceder a Recursos
+                </a>
+            </div>
+
+            <div class="resource-card">
+                <div class="card-header">
+                    <div class="card-icon linkedin">💼</div>
+                    <h3 class="card-title">Red Profesional</h3>
+                </div>
+                <p class="card-description">Conecta con profesionales de la industria, comparte oportunidades laborales y mantente al día con las últimas tendencias del sector.</p>
+                <a href="https://www.linkedin.com/groups/13270099/" class="card-btn" target="_blank">
+                    <span>🤝</span> Conectar
+                </a>
+            </div>
+        </div>
+
+        <div class="schedule-card">
+            <div class="schedule-content">
+                <h3>📡 Transmisiones en Vivo</h3>
+                <div class="schedule-time">🕐 Sábados 4:30 PM - 5:30 PM</div>
+                <p class="schedule-description">Sesiones en vivo con análisis de casos actuales, tendencias emergentes y Q&A con la comunidad</p>
+                <a href="https://www.youtube.com/@uribecesare" class="card-btn" target="_blank">
+                    <span>📺</span> Sintonizar Canal
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <h3>¡Tu viaje en IA apenas comienza!</h3>
+                <p>Continúa creciendo, innovando y aplicando todo lo aprendido. El futuro está en tus manos.</p>
+                <div class="contact-info">
+                    <span>📧</span>
+                    <strong>Contacto:</strong>
+                    <a href="mailto:fcuribe@zegel.pe">fcuribe@zegel.pe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animated background particles
+        function createParticles() {
+            const bgAnimation = document.querySelector('.bg-animation');
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                bgAnimation.appendChild(particle);
+            }
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            // Observe all animated elements
+            document.querySelectorAll('.resource-card, .thanks-section, .schedule-card').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
